@@ -1,0 +1,35 @@
+/* ---------- BLOQUE DE ESTILOS CSS ---------- */
+/* Tema: Selectores por atributo */
+
+/* Selector por atributo exacto
+    Selecciona elementos que tienen un atributo con un valor exacto. */
+input[type="number"] {
+    background: red; /* Los inputs de tipo "number" tendrán fondo rojo */
+}
+
+/* Otro ejemplo de coincidencia exacta:
+    Este selector afecta a los enlaces <a> cuyo atributo href sea exactamente "www.google.com" */
+a[href="www.google.com"] {
+    color: orange; /* El enlace de Google se verá naranja */
+}
+
+/* Selector que contiene una palabra o cadena
+    Usa el asterisco (*)
+    Selecciona los elementos cuyo atributo contiene la palabra indicada, en cualquier parte del valor. */
+a[href*="udemy"] {
+    color: violet; /* Cualquier enlace que contenga "udemy" en el href será violeta */
+}
+
+/* Selector que comienza por una palabra o prefijo
+    Usa el símbolo ^ (circunflejo)
+    Selecciona los elementos cuyo atributo empieza con la cadena indicada. */
+a[href^="http"] {
+    color: red; /* Los enlaces cuyo href empiece por "http" serán rojos */
+}
+
+/* Selector que termina con una palabra o sufijo
+    Usa el símbolo $ (dólar)
+    Selecciona los elementos cuyo atributo termina con la cadena indicada. */
+a[href$=".pdf"] {
+    color: yellow; /* Los enlaces que terminen en ".pdf" se verán amarillos */
+}

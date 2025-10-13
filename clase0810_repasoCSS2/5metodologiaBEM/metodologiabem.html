@@ -1,25 +1,81 @@
 <!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+
 <html lang="en">
+<!-- Raíz del documento. El atributo lang="en" indica que el idioma es inglés -->
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Metodología BEM</title>
+     <!-- Cabecera: contiene metadatos y estilos -->
+
+     <meta charset="UTF-8">
+     <!-- Define la codificación de caracteres UTF-8 (permite tildes, eñes, etc.) -->
+
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Mejora compatibilidad con navegadores antiguos como Internet Explorer -->
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Permite que la página se adapte correctamente a diferentes pantallas -->
+
+     <title>Document</title>
+     <!-- Título que aparecerá en la pestaña del navegador -->
+
 </head>
+
 <body>
-    
+     <!-- Cuerpo del documento, contenido visible -->
 
+     <!-- BLOQUE PRINCIPAL (.box) -->
+     <div class="box">
+          <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Eveniet quo ducimus consectetur nulla iusto reiciendis minus eos
+               quibusdam similique, expedita sapiente neque iure nobis!
+               Dolore porro iusto maxime! Impedit, minus?
+          </p>
+          <!-- ELEMENTO HIJO (.box__btn) -->
+          <button class="box__btn">Click aquí</button>
+          <!-- Este botón forma parte del bloque "box" -->
+     </div>
 
-  <div class="card">
-    <h2 class="card__title">Titulo</h2>
-    <p class="card__text"></p>
-    <button class="card__btn"></button>
-  </div>
+     <!-- Otro bloque idéntico, reutilizando los mismos estilos -->
+     <div class="box">
+          <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Eveniet quo ducimus consectetur nulla iusto reiciendis minus eos
+               quibusdam similique, expedita sapiente neque iure nobis!
+               Dolore porro iusto maxime! Impedit, minus?
+          </p>
+          <button class="box__btn">Click aquí</button>
+     </div>
 
-  <div class="card card--hightlighted">
-    <h2 class="card__title">Titulo destacado</h2>
-    <button class="card__btn--large">Comprar</button>
-  </div>
+     <!-- Un tercer bloque con la misma estructura -->
+     <div class="box">
+          <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Eveniet quo ducimus consectetur nulla iusto reiciendis minus eos
+               quibusdam similique, expedita sapiente neque iure nobis!
+               Dolore porro iusto maxime! Impedit, minus?
+          </p>
+          <button class="box__btn">Click aquí</button>
+     </div>
+
+     <!-- BLOQUE CON MODIFICADOR -->
+     <section class="box box--bgred">
+          <!-- Aquí aplicamos el modificador .box--bgred
+               El bloque base es el mismo (.box),
+               pero el modificador cambia su apariencia (fondo rojo). -->
+          <p>
+               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+               Fugiat, ab debitis fuga aliquid quasi hic atque veritatis laborum quas,
+               asperiores quod alias beatae vero deserunt, dolorum ex aspernatur pariatur doloribus.
+          </p>
+
+          <!-- ELEMENTO + MODIFICADOR -->
+          <button class="box__btn btn--bgred">Click aquí</button>
+          <!-- El botón sigue siendo parte del bloque (.box__btn)
+               pero además tiene el modificador .btn--bgred que cambia su color -->
+     </section>
 
 </body>
 </html>
+<!-- Fin del documento HTML -->

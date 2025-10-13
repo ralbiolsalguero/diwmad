@@ -1,0 +1,42 @@
+/* ---------- BLOQUE DE ESTILOS CSS ---------- */
+/* Tema: Metodología BEM (Block, Element, Modifier)
+    
+    BEM = Block, Element, Modifier
+    - BLOCK: componente independiente que tiene sentido por sí mismo.
+    - ELEMENT: parte interna o hijo del bloque (no puede existir sin el bloque).
+    - MODIFIER: variación del bloque o elemento (color, tamaño, estado...).
+
+    Convención de nombres:
+    ---------------------
+    - Bloque: .nombre
+    - Elemento: .nombre__subparte
+    - Modificador: .nombre--variación
+*/
+
+
+/* ---------- BLOQUE ---------- */
+.box {
+    width: 200px;               /* Ancho del bloque */
+    background: lightskyblue;   /* Color de fondo azul claro */
+    padding: 40px;              /* Espacio interno */
+    margin: 20px;               /* Separación externa */
+}
+
+/* ---------- ELEMENTO ---------- */
+.box__btn {
+    width: 100px;               /* Ancho del botón dentro del bloque */
+    height: 40px;               /* Alto del botón */
+    background: rgb(2, 68, 153);/* Fondo azul oscuro */
+    border: none;               /* Sin borde */
+    color: #FFF;                /* Texto blanco */
+}
+
+/* ---------- MODIFICADOR DE BLOQUE ---------- */
+.box--bgred {
+    background: red; /* Versión del bloque con fondo rojo */
+}
+
+/* ---------- MODIFICADOR DE ELEMENTO ---------- */
+.btn--bgred {
+    background: rgb(128, 0, 0); /* Versión del botón con fondo rojo oscuro */
+}

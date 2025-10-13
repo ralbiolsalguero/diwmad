@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+
+<html lang="en">
+<!-- Raíz del documento HTML. El atributo lang="en" indica que el contenido está en inglés -->
+
+<head>
+     <!-- Cabecera: contiene metadatos y estilos -->
+
+     <meta charset="UTF-8">
+     <!-- Especifica la codificación de caracteres, UTF-8 permite tildes y caracteres especiales -->
+
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Asegura compatibilidad con versiones antiguas de Internet Explorer -->
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Hace que el diseño sea adaptable (responsive) a móviles y pantallas pequeñas -->
+
+     <title>Document</title>
+     <!-- Título que aparece en la pestaña del navegador -->
+
+     <style>
+          /* ---------- BLOQUE DE ESTILOS CSS ---------- */
+
+          /* Selector descendiente:
+             Selecciona los párrafos <p> que estén dentro del elemento con id="contenedor".
+             Es decir, SOLO los <p> hijos o nietos de #contenedor. */
+          #contenedor p {
+               color: blue; /* Los textos de los párrafos dentro de #contenedor serán azules */
+          }
+
+          /* Otro selector descendiente:
+             Afecta a los elementos <h3> que estén dentro del contenedor con id="contenedor2" */
+          #contenedor2 h3 {
+               color: violet; /* El título <h3> dentro de #contenedor2 será de color violeta */
+          }
+
+          /* Ejemplo comentado (no activo):
+             Este habría cambiado el color solo de los <a> dentro de <li> dentro de <ul> dentro de #contenedor3.
+             Es una jerarquía más específica. */
+          /*
+          #contenedor3 ul li a {
+               color: yellow;
+          }
+          */
+
+          /* En cambio, este selector activo aplica a TODOS los enlaces <a> que estén
+             dentro de #contenedor3, sin importar si están dentro de <ul> o no */
+          #contenedor3 a {
+               color: yellow; /* Enlaces de color amarillo dentro del contenedor 3 */
+          }
+
+     </style>
+
+</head>
+
+<body>
+     <!-- Cuerpo del documento: todo lo visible en la página -->
+
+     <div id="contenedor">
+          <!-- Primer bloque de contenido, con identificador "contenedor" -->
+          <h3>Titulo</h3>
+          <!-- Título normal sin estilo específico (no se ve afectado por los estilos definidos) -->
+
+          <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Exercitationem nisi corporis labore fugit. Non doloremque ducimus,
+               distinctio, culpa vero fugit velit saepe tenetur,
+               quae officia omnis quo ullam optio accusantium!
+          </p>
+          <!-- Este <p> está dentro de #contenedor, así que su texto será azul -->
+
+          <a href="">Enlace</a>
+          <!-- Enlace dentro de #contenedor, no se ve afectado por ningún estilo,
+               porque no hay regla para #contenedor a -->
+     </div>
+
+     <div id="contenedor2">
+          <!-- Segundo bloque con identificador "contenedor2" -->
+          <h3>Titulo</h3>
+          <!-- Este <h3> sí se ve afectado por #contenedor2 h3, así que será de color violeta -->
+
+          <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Exercitationem nisi corporis labore fugit. Non doloremque ducimus,
+               distinctio, culpa vero fugit velit saepe tenetur,
+               quae officia omnis quo ullam optio accusantium!
+          </p>
+          <!-- Este <p> no se ve afectado por #contenedor p, así que conserva el color por defecto (negro) -->
+
+          <a href="">Enlace</a>
+          <!-- Enlace dentro de #contenedor2, tampoco tiene estilo específico -->
+     </div>
+
+     <div id="contenedor3">
+          <!-- Tercer bloque con identificador "contenedor3" -->
+          <ul>
+               <!-- Lista desordenada -->
+               <li><a href="">Priemer elemento</a></li>
+               <li><a href="">Segundo elemento</a></li>
+               <li><a href="">Tercer elemento</a></li>
+               <!-- Cada enlace <a> está dentro de #contenedor3, por tanto,
+                    se mostrará en color amarillo -->
+          </ul>
+     </div>
+
+</body>
+</html>
+<!-- Fin del documento HTML -->

@@ -1,0 +1,45 @@
+/* ---------- BLOQUE DE ESTILOS CSS ---------- */
+/* Tema: Pseudoclases avanzadas */
+
+/* :first-child
+    Aplica estilos al primer elemento <p> dentro del contenedor padre */
+p:first-child {
+    color: blue; /* El primer párrafo será azul */
+}
+
+/* :last-child
+    Aplica estilos al último elemento <p> dentro del contenedor padre */
+p:last-child {
+    color: red; /* El último párrafo será rojo */
+}
+
+/* :nth-child(3)
+    Selecciona el tercer hijo del contenedor, en este caso el tercer <p> */
+p:nth-child(3) {
+    color: turquoise; /* El tercer párrafo será color turquesa */
+}
+
+/* :nth-last-child(3)
+    Selecciona el tercer hijo contando desde el final */
+p:nth-last-child(3) {
+    color: violet; /* El antepenúltimo párrafo será violeta */
+}
+
+/* :nth-child(even)
+    Aplica estilos a los elementos pares (2º, 4º, 6º, etc.) */
+p:nth-child(even) {
+    color: orange; /* Todos los párrafos en posición par serán naranjas */
+}
+
+/* :nth-child(odd)
+    Aplica estilos a los elementos impares (1º, 3º, 5º, etc.) */
+p:nth-child(odd) {
+    color: red; /* Todos los párrafos en posición impar serán rojos */
+}
+
+/* :nth-child(4n)
+    Selecciona todos los elementos cuyo número sea múltiplo de 4
+    (4, 8, 12, 16, etc.) */
+p:nth-child(4n) {
+    color: black; /* Cada 4º párrafo será negro */
+}

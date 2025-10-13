@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+
+<html lang="en">
+<!-- Raíz del documento HTML. El atributo lang="en" indica el idioma principal de la página (inglés) -->
+
+<head>
+     <!-- Cabecera del documento: contiene metadatos, título y estilos -->
+
+     <meta charset="UTF-8">
+     <!-- Define la codificación de caracteres (UTF-8 permite tildes, eñes, símbolos, etc.) -->
+
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Garantiza compatibilidad con versiones antiguas de Internet Explorer -->
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Hace que el diseño sea adaptable (responsive) a diferentes tamaños de pantalla -->
+
+     <title>Document</title>
+     <!-- Título que se mostrará en la pestaña del navegador -->
+
+     <style>
+          /* ---------- BLOQUE DE ESTILOS CSS ---------- */
+
+          /* Selector hijo:
+             El símbolo '>' indica una relación DIRECTA entre padre e hijo.
+             En este caso:
+             - Selecciona los elementos <h1> que son hijos directos de un <div>
+               que a su vez es hijo directo de un elemento con clase .contenedor
+             (es decir, .contenedor > div > h1).
+          */
+          .contenedor > div > h1 {
+               color: blue; /* Los <h1> que cumplan esa jerarquía serán azules */
+          }
+
+          /* Importante:
+             Si el <h1> no es hijo directo, sino que está más profundo (por ejemplo,
+             dentro de un div dentro de otro div), el estilo NO se aplica. */
+     </style>
+
+</head>
+
+<body>
+     <!-- Contenido visible de la página -->
+
+     <div class="contenedor">
+          <!-- Primer nivel: este es el contenedor principal -->
+
+          <div>
+               <!-- Segundo nivel: hijo directo de .contenedor -->
+
+               <h1>Titulo</h1>
+               <!-- Este <h1> SÍ cumple la regla (.contenedor > div > h1)
+                    porque:
+                    .contenedor → div → h1
+                    Por tanto, su texto será de color azul -->
+
+               <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ipsa, eligendi quibusdam voluptas ut, quae fuga eum nesciunt
+                    cupiditate tempore incidunt voluptatem.
+                    Veritatis repellendus eligendi nesciunt temporibus recusandae
+                    at voluptas eveniet.
+               </p>
+               <!-- Este párrafo no tiene estilos específicos aplicados -->
+
+               <div>
+                    <h1>Titulo nuevo</h1>
+                    <!-- Este <h1> NO cumple la regla, porque está dentro de un div anidado:
+                         .contenedor → div → div → h1
+                         (hay un nivel más de profundidad)
+                         Por tanto, NO será azul -->
+               </div>
+          </div>
+
+          <div>
+               <!-- Segundo bloque, también hijo directo de .contenedor -->
+
+               <h1>Titulo</h1>
+               <!-- Este <h1> SÍ cumple la regla (.contenedor > div > h1),
+                    por lo tanto se mostrará en color azul -->
+
+               <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ipsa, eligendi quibusdam voluptas ut, quae fuga eum nesciunt
+                    cupiditate tempore incidunt voluptatem.
+                    Veritatis repellendus eligendi nesciunt temporibus recusandae
+                    at voluptas eveniet.
+               </p>
+               <!-- Párrafo normal sin estilo aplicado -->
+          </div>
+     </div>
+</body>
+</html>
+<!-- Fin del documento HTML -->

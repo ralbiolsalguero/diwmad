@@ -1,0 +1,7 @@
+/* ---------- BLOQUE DE ESTILOS CSS ---------- */
+
+/* Selector general (*) */
+* {
+    color: blue; /* Aplica el color azul a TODO el texto de la página,
+                    sin importar qué etiqueta o clase tenga */
+}

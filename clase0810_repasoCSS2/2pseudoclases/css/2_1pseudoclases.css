@@ -1,0 +1,29 @@
+/* ---------- BLOQUE DE ESTILOS ---------- */
+/* Tema: Pseudoclases CSS */
+
+/* Enlaces no visitados */
+a:link {
+    color: orange; /* Color inicial del enlace antes de ser visitado */
+}
+
+/* Enlaces ya visitados */
+a:visited {
+    color: violet; /* Cambia a violeta si el usuario ya hizo clic en ese enlace */
+}
+
+/* Input con foco (cuando el usuario hace clic o escribe en él) */
+input:focus {
+    background: red; /* Cambia el fondo del campo a rojo */
+}
+
+/* Estado hover: cuando el cursor pasa por encima del elemento */
+a:hover {
+    color: red;       /* Cambia el color a rojo al pasar el ratón */
+    font-size: 20px;  /* Aumenta el tamaño del texto */
+}
+
+/* Pseudoclase de negación :not()
+    Aplica estilos a todos los párrafos <p> que NO tengan la clase "miparrafo" */
+p:not(.miparrafo) {
+    color: blue; /* Los párrafos que no sean de clase "miparrafo" serán azules */
+}

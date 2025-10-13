@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+
+<html lang="en">
+<!-- Raíz del documento. El atributo lang="en" indica que el idioma es inglés -->
+
+<head>
+     <!-- Cabecera del documento: contiene metadatos, título y estilos -->
+
+     <meta charset="UTF-8">
+     <!-- Codificación de caracteres (UTF-8 permite tildes, eñes, etc.) -->
+
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Garantiza compatibilidad con navegadores antiguos como Internet Explorer -->
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Hace la página adaptable (responsive) a distintos tamaños de pantalla -->
+
+     <title>Document</title>
+     <!-- Título que aparece en la pestaña del navegador -->
+</head>
+
+<body>
+     <!-- Cuerpo del documento: contiene la parte visible en el navegador -->
+
+     <div class="contenedor">
+          <div class="contenido">
+
+               <!-- Primer bloque de artículo -->
+               <div class="articulo">
+                    <h1>Hola mundo</h1>
+                    <!-- Elemento principal: a partir de aquí se aplican los selectores de hermanos -->
+
+                    <span>Hola mundo</span>
+                    <!-- Es el primer hermano inmediato del <h1> -->
+                    <!-- Por lo tanto, se aplica el selector adyacente (+) y se verá en color rojo -->
+
+                    <p>
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                         Et odit id sit illo, praesentium culpa quis beatae voluptate ea expedita
+                         dolor pariatur doloribus mollitia eos consectetur assumenda blanditiis
+                         ducimus dolorem!
+                    </p>
+                    <!-- El párrafo no se ve afectado porque los selectores apuntan a <span> -->
+               </div>
+
+               <!-- Segundo bloque de artículo -->
+               <div class="articulo">
+                    <h1>Hola mundo2</h1>
+                    <!-- Primer <span> justo después → color rojo (por h1 + span) -->
+
+                    <span>
+                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                         Numquam, molestiae error? Natus, inventore dolorum non aut
+                         reprehenderit sed vel doloribus quod. Voluptatibus natus debitis rerum
+                         officia iure, unde ut adipisci.
+                    </span>
+
+                    <span>Hola este es un texto</span>
+                    <!-- Segundo <span> sigue siendo hermano del <h1>,
+                         pero ya no es el inmediato, así que el selector (+) no se aplica.
+                         Sin embargo, sí cumple el selector (~), por lo tanto será de color azul. -->
+               </div>
+
+               <!-- Tercer bloque de artículo -->
+               <div class="articulo">
+                    <h1>Hola mundo3</h1>
+
+                    <p>
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                         Quia perferendis ad quas? Corporis, quam magnam autem omnis dolorem excepturi
+                         quas mollitia consectetur officiis, reprehenderit sint porro explicabo eum labore alias!
+                    </p>
+                    <!-- Aquí no hay ningún <span> después del <h1>, solo un párrafo y un <strong>,
+                         por lo tanto, ninguno de los dos selectores (ni + ni ~) se aplican. -->
+
+                    <strong>Hola mundo</strong>
+                    <!-- No se ve afectado porque no es un <span>. -->
+               </div>
+
+          </div>
+     </div>
+
+</body>
+</html>
+<!-- Fin del documento HTML -->

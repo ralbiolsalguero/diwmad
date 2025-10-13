@@ -1,0 +1,32 @@
+/* ---------- BLOQUE DE ESTILOS ---------- */
+/* Tema: Herencia en CSS */
+
+/* 
+    La herencia en CSS permite que ciertos estilos definidos en un elemento
+    "padre" se apliquen automáticamente a sus elementos "hijos".
+
+    Por ejemplo:
+    - Propiedades como color, font-family, line-height SÍ se heredan.
+    - Propiedades como border, margin, padding, background NO se heredan
+        a menos que se indique explícitamente con "inherit".
+*/
+
+body {
+    color: red; /* Propiedad heredable: el texto de los hijos será rojo */
+    border: 1px solid blue; /* Propiedad NO heredable: no se aplica a los hijos */
+}
+
+/*
+    Valores especiales en CSS:
+
+    - inherit → Hace que el elemento herede explícitamente el valor
+        de esa propiedad de su elemento padre.
+
+    - initial → Restaura el valor inicial por defecto de la propiedad,
+        es decir, el valor que tendría si no se hubiera modificado.
+*/
+
+div {
+    border: initial; /* Quita la herencia del borde azul del body
+                        y restablece el valor inicial (sin borde). */
+}

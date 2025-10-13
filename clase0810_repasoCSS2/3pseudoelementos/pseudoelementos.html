@@ -1,26 +1,56 @@
 <!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+
 <html lang="en">
+<!-- Raíz del documento. El atributo lang="en" indica que el idioma es inglés -->
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Pseudclases</title>
+     <!-- Cabecera: contiene los metadatos y los estilos CSS -->
+
+     <meta charset="UTF-8">
+     <!-- Define la codificación de caracteres UTF-8, que permite usar tildes y caracteres especiales -->
+
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Mejora la compatibilidad con navegadores antiguos como Internet Explorer -->
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Hace que la página se adapte correctamente a diferentes tamaños de pantalla (responsive) -->
+
+     <title>Document</title>
+     <!-- Título que aparece en la pestaña del navegador -->
+
 </head>
+
 <body>
-    
-    <span></span>
+     <!-- Contenido visible de la página -->
 
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat voluptatum debitis ab minus dolore dolores totam asperiores cum, alias quam! Amet magni porro sequi illo beatae dolore, culpa at obcaecati.
-    </p>
+     <span></span>
+     <!-- Elemento vacío.
+          Gracias a ::before y ::after, mostrará en pantalla:
+          "-Hola, texto generado"
+          (aunque el <span> no tenga texto real dentro) -->
 
-    <ul>
-        <li>Elemento</li>
-        <li>Elemento</li>
-        <li>Elemento</li>
-    </ul>
+     <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Amet ex laboriosam vel nostrum hic cumque dolorem enim fuga ipsa
+          numquam distinctio deserunt nihil sequi facere provident quibusdam
+          minima, ratione suscipit.
+     </p>
+     <!-- Este párrafo mostrará:
+          - La primera letra más grande (por ::first-letter)
+          - La primera línea en rojo (por ::first-line) -->
 
-    <input type="text" placeholder="Escribe tu nombre">
+     <ul>
+          <!-- Lista desordenada con tres elementos -->
+          <li>Elemento</li>
+          <li>Elemento</li>
+          <li>Elemento</li>
+          <!-- Las viñetas (•) se pintarán de color violeta gracias a ::marker -->
+     </ul>
 
+     <input type="text" placeholder="Escribe tu nombre">
+     <!-- Campo de texto con un placeholder que será:
+          - Rojo y más grande (por ::placeholder) -->
 </body>
 </html>
+<!-- Fin del documento HTML -->

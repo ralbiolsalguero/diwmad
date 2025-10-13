@@ -1,0 +1,18 @@
+/* ---------- BLOQUE DE ESTILOS CSS ---------- */
+/* Tema: Selectores de hermanos */
+
+/* Hermano general (~)
+Afecta a todos los elementos <span> que sean "hermanos" del <h1>
+dentro de .articulo, es decir, que estén en el mismo nivel jerárquico
+y aparezcan después del <h1> (no importa si hay otros elementos entre medias). */
+.articulo h1 ~ span {
+color: blue; /* Todos los <span> después del <h1> serán azules */
+}
+
+/* Hermano adyacente (+)
+Afecta solo al primer elemento <span> que aparece
+justo después del <h1> dentro del mismo nivel.
+Es decir: el hermano inmediato. */
+.articulo h1 + span {
+color: red; /* Solo el primer <span> después del <h1> será rojo */
+}

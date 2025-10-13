@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Indica que el documento está escrito en HTML5 -->
+
+<html lang="en">
+<!-- Raíz del documento HTML. El atributo lang especifica el idioma (en inglés en este caso) -->
+
+<head>
+     <!-- Cabecera: contiene metadatos, título y estilos CSS -->
+
+     <meta charset="UTF-8">
+     <!-- Define la codificación de caracteres para permitir tildes, eñes, etc. -->
+
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Asegura la compatibilidad con versiones antiguas de Internet Explorer -->
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Permite que la página se adapte correctamente a pantallas pequeñas (responsive) -->
+
+     <title>Document</title>
+     <!-- Título que aparece en la pestaña del navegador -->
+</head>
+
+<body>
+     <!-- Contenido visible de la página -->
+
+     <h1>Hola mundo titulo</h1>
+     <!-- Etiqueta de encabezado principal (h1)
+          - Color azul (por el primer bloque)
+          - Tamaño de fuente 40px (por el segundo bloque) -->
+
+     <h2 class="elemento1">Hola mundo subtitulo</h2>
+     <!-- Encabezado h2 con la clase "elemento1"
+          - Hereda color azul (por el primer bloque, ya que p, a y h1 están definidos, pero no h2 directamente)
+          - Pero el tamaño 40px se aplica porque la clase .elemento1 está incluida en el segundo grupo -->
+
+     <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptas, nemo corrupti id eum quibusdam atque ipsam maiores distinctio
+          cumque tenetur quaerat accusantium tempora dolor, enim tempore illum consequuntur deserunt officia.
+     </p>
+     <!-- Párrafo <p>
+          - Color azul (por el primer grupo de selectores)
+          - No cambia tamaño de fuente, ya que solo h1, .elemento1 y .elemento2 tienen font-size 40px -->
+
+     <a href="" class="elemento2">Hola mundo</a>
+     <!-- Enlace <a> con la clase .elemento2
+          - Color azul (por el primer bloque)
+          - Tamaño de fuente 40px (por el segundo bloque, al tener la clase .elemento2) -->
+
+</body>
+</html>
+<!-- Fin del documento HTML -->

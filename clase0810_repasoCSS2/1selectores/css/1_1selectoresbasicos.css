@@ -1,0 +1,39 @@
+ /* ---------- ESTILOS CSS ---------- */
+
+/* Selector por etiqueta (aplica a todos los <h1>) */
+h1 {
+    color: green;  /* Cambia el color del texto a verde */
+}
+
+/* Selector por ID (solo afecta al elemento con id="miparrafo") */
+#miparrafo {
+    color: blue; /* Pinta el texto del párrafo de azul */
+}
+
+/* Selector por clase (afecta a todos los elementos con class="texto-naranja") */
+.texto-naranja {
+    color: orange; /* Cambia el color del texto a naranja */
+}
+
+/* Otra clase: cambia el grosor de la fuente */
+.fuente-bold {
+    font-weight: 600; /* Hace el texto seminegrita */
+}
+
+/* Clase para cambiar el color de fondo */
+.fondo-color {
+    background-color: red; /* Fondo de color rojo */
+}
+
+/* Clase para cambiar el color del texto */
+.texto-blanco {
+    color: #FFF; /* Texto de color blanco */
+}
+
+/* Clases combinadas (agrupadas):
+    Se aplica SOLO a los elementos que tengan ambas clases:
+    class="fondo-color texto-blanco"
+*/
+.fondo-color.texto-blanco {
+    font-size: 30px; /* Aumenta el tamaño de la fuente */
+}

@@ -1,0 +1,18 @@
+/* ---------- BLOQUE DE ESTILOS CSS ---------- */
+
+/* Selectores agrupados:
+    Aplica el mismo estilo a varios elementos separados por comas.
+    En este caso, tanto h1, p como a tendrán el texto azul. */
+h1, p, a {
+    color: blue; /* Texto de color azul */
+}
+
+/* Segundo grupo de selectores agrupados:
+    Afecta al elemento <h1> y a cualquier elemento con las clases .elemento1 o .elemento2 */
+h1, .elemento1, .elemento2 {
+    font-size: 40px; /* Cambia el tamaño del texto a 40 píxeles */
+}
+
+/* Nota:
+    Los selectores agrupados se utilizan para evitar repetir las mismas reglas varias veces.
+    Ejemplo: en lugar de escribir tres bloques con font-size: 40px, se agrupan en uno solo. */

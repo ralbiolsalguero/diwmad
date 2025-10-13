@@ -1,0 +1,43 @@
+/* ---------- BLOQUE DE ESTILOS CSS ---------- */
+/* Tema: Pseudoelementos (se escriben con :: en lugar de :) */
+
+/* ::before
+    Inserta contenido antes del elemento seleccionado.
+    En este caso, antes de cada <span> aparecerá un guion '-' */
+span::before {
+    content: '-'; /* Texto o símbolo que se genera antes del contenido real */
+    font-size: 30px; /* Tamaño del símbolo */
+}
+
+/* ::after
+    Inserta contenido después del elemento seleccionado.
+    Aquí se añade un texto azul al final del <span>. */
+span::after {
+    content: 'Hola, texto generado'; /* Texto añadido después */
+    color: blue; /* Color azul para distinguirlo */
+}
+
+/* ::first-letter
+    Aplica estilos a la primera letra del párrafo */
+p::first-letter {
+    font-size: 45px; /* Aumenta el tamaño de la primera letra */
+}
+
+/* ::first-line
+    Aplica estilos solo a la primera línea visible del texto */
+p::first-line {
+    color: red; /* Pone en rojo solo la primera línea del párrafo */
+}
+
+/* ::marker
+    Modifica los símbolos (viñetas) de las listas (<ul> o <ol>) */
+ul li::marker {
+    color: violet; /* Cambia el color de las viñetas a violeta */
+}
+
+/* ::placeholder
+    Permite modificar el texto de sugerencia dentro de un <input> */
+input::placeholder {
+    color: red; /* El texto del placeholder será rojo */
+    font-size: 18px; /* Y tendrá un tamaño mayor de fuente */
+}
