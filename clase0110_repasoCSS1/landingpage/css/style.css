@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fondo{
+    background: url("../img/bg.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    height: 100vh;
+}
+.titulo{
+    padding: 1em;
+    text-align: center;
+}
+
+.titulo h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: #f9f3f4;
+    font-size: 500%;
+    margin-bottom: 0.5em;
+}
+
+.titulo .btn{
+    text-decoration: none;
+    border: solid 3px;
+    border-radius: 9px;
+    padding: 7px 13px;
+    color:#f9f3f4;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.titulo .btn:hover{
+    background-color: #2196f3;
+}
+
+nav{
+    padding: 1em;
+}
+
+nav li{
+    font-size: 1.5em;
+    display: inline-block;
+}
+nav a{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0.7em 1em;
+    color:white;
+    transition: 3s;
+}
+
+nav a:hover{
+    background-color: rgb(82, 4, 155);
+}
+

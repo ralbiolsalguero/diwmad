@@ -1,0 +1,86 @@
+/*Selector general*/
+*{
+    color:blue;
+}
+
+/*Selectores de etiqueta*/
+
+h1{
+    color:green;
+}
+
+/*Selector por ID*/
+
+#miparrafo{
+    color:green;
+}
+
+/*Selector por clase*/
+
+.texto-naranja{
+    color:orange;
+}
+
+.fuente-bold{
+    font-weight: 600;/*Hacer el texto seminegrita*/
+}
+
+.fondo-color{
+    background-color: red;
+}
+
+.texto-blanco{
+    color: #FFF;
+}
+
+/*Clases combinadas*/
+.fondo-color.texto-blanco{
+    font-size: 30px; /*Aumenta el tamaño de fuente*/
+}
+
+/*Selectores agrupados*/
+
+h1, p, a{
+    color: blue;
+}
+
+h1, .elemento1, .elemento2{
+    font-size: 40px;
+}
+
+/*Selectores descendientes*/
+
+#contenedor p{
+    color: blue;
+}
+
+#contenedor h3{
+    color:blueviolet;
+}
+
+/*Selectores hijos
+El simbolo '>' indica una relación DIRECTA entre padre e hijo.
+
+
+*/
+
+.contenedor > div > h1{
+    color:blue;
+}
+
+
+/*Selector hermano
+~ -> Hermano general
+*/
+
+.articulo h1 ~ span{
+    color:blue;
+}
+
+/*
+Selector adyacente -> +
+*/
+
+.articulo h1 + span{
+    color:red; /*Solo el primer <span> después del <h1> serña rojo*/
+}

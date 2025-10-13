@@ -1,0 +1,28 @@
+/*Pseudoelementos ::*/
+
+span::before{ /*Insertar contenido antes del elemento seleccionado.*/
+    content: '-';
+    font-size: 30px;
+}
+
+span::after{ /*Insertar contenido después del elemento seleccionado.*/
+    content: 'Hola, nos vemos en el after';
+    color: blue;
+}
+
+p::first-letter{ /*Aplicar estilos a la primera letra del párrafo*/
+    font-size: 45px;
+}
+
+p::first-line{ /*Aplica estilos solo a la primera linea visible del texto*/
+    color:red;
+}
+
+ul li::marker{ /*Modificar los simbolos (viñetas) de las listas <ul> o <ol>*/
+    color: violet;
+}
+
+input::placeholder{ /*Permite modificar el texto de sugerencia dentro del <input>*/
+    color:red;
+    font-size: 18px;
+}

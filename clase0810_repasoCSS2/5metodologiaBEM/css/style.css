@@ -1,0 +1,41 @@
+
+/*
+
+  BEM
+  B -> Block -> .card
+  E -> Element -> card__title
+  M -> Modifier -> .card__title--large
+  -- -> Modificador
+  __ -> Se usa para indicar una parte interna del elemento principal
+
+
+*/
+
+.card{
+    background: white;
+}
+
+.card__title{
+    font-size: 20px;
+}
+
+.card__btn{
+    background: blue;
+    color: white;
+}
+
+/*Modificador*/
+.card{
+    background: white;
+}
+
+.card--higthlighted{
+    background: yellow;
+}
+
+.card__btn{
+    background: blue;
+}
+.card__btn--large{
+    font-size: 20px;
+}
