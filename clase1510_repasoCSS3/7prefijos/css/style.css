@@ -1,0 +1,39 @@
+/* ---------- BLOQUE DE ESTILOS CSS ---------- */
+/* Tema: Prefijos de los navegadores en CSS */
+
+/* 
+    Antes de que las propiedades CSS fueran estándares oficiales,
+    los distintos navegadores las implementaban usando un "prefijo" 
+    propio del motor de renderizado que utilizaban.
+
+    Así se podía experimentar con nuevas propiedades sin romper compatibilidad.
+*/
+
+div {
+    /* Propiedad moderna (sin prefijo): se usa hoy en día */
+    transform: rotate(25deg); 
+    /* Rota el elemento 25 grados */
+
+    /* Prefijos de navegadores antiguos:
+        Cada línea indica el motor del navegador al que pertenece.
+    */
+
+    -webkit-transform: rotate(25deg); 
+    /* Prefijo WebKit → Chrome, Safari, versiones antiguas de Android */
+
+    -moz-transform: rotate(25deg); 
+    /* Prefijo Gecko → Firefox antiguo */
+
+    -ms-transform: rotate(25deg); 
+    /* Prefijo Trident → Internet Explorer */
+
+    -o-transform: rotate(25deg);
+    /* Prefijo Presto → Opera antiguo */
+
+    /* En resumen:
+            -webkit- → Chrome / Safari
+            -moz- → Firefox
+            -ms- → Internet Explorer
+            -o- → Opera
+    */
+}

@@ -1,0 +1,31 @@
+div{
+    width: 200px;
+    /* Define el ancho del div en 200 píxeles. */
+
+    height: 200px; 
+    /* Define la altura del div en 200 píxeles. */
+
+
+    /* Palabra clave */
+    background-color: crimson;
+    /* Asigna un color mediante su nombre (palabra clave). */
+
+    /* Hexadecimal */
+    background-color: #129700;
+    /* Define el color mediante código hexadecimal. */
+
+    /* RGB */
+    background-color: rgb(17, 0, 255);
+    /* Define el color mediante valores RGB (rojo, verde, azul). */
+
+    /* HSL */
+    background-color: hsl(125, 98%, 40%);
+    /* Define el color con matiz (hue), saturación y luminosidad. */
+
+    /* Degradado */
+    background: linear-gradient(90deg, blue, orange, crimson, green);
+    /* Crea un degradado lineal en 90 grados entre varios colores. */
+
+    background: radial-gradient(green, orange, blue, red);
+    /* Crea un degradado radial entre varios colores. */
+}

@@ -1,0 +1,67 @@
+/* ---------- UNIDADES DE MEDIDA FIJA EN CSS ---------- */
+/*
+    Las unidades fijas no dependen del tamaño del dispositivo,
+    ni del zoom del navegador ni del tamaño del texto del usuario.
+    Son medidas absolutas (no se adaptan).
+*/
+
+div {
+    background: blue; /* Fondo azul para visualizar el tamaño del div */
+
+    /* 
+        q (quarter-millimeter)
+        Equivale a 1/40 de centímetro, es decir, 0.25 mm.
+        Es una unidad muy poco utilizada, derivada de los estándares de impresión.
+    */
+    width: 20q;
+    height: 20q;
+
+    /* 
+        px (píxel)
+        Unidad más usada en pantallas.
+        Representa un punto en la cuadrícula de la pantalla.
+        Aunque depende de la densidad del dispositivo, es tratada como fija por CSS.
+    */
+    width: 50px;
+    height: 50px;
+
+    /* 
+        pt (punto tipográfico)
+        1 punto = 1/72 de pulgada.
+        Muy utilizado en impresión o documentos PDF.
+    */
+    width: 50pt;
+    height: 50pt;
+
+    /* 
+        mm (milímetro)
+        1 mm = 1/10 de centímetro.
+        Unidad física de medida (ideal para imprimir).
+    */
+    width: 50mm;
+    height: 50mm;
+
+    /* 
+        pc (pica)
+        1 pica = 12 puntos (≈ 1/6 de pulgada).
+        Se usa en diseño editorial o tipografía.
+    */
+    width: 50pc;
+    height: 50pc;
+
+    /* 
+        cm (centímetro)
+        Unidad física del sistema métrico.
+        1 cm = 10 mm.
+    */
+    width: 50cm;
+    height: 50cm;
+
+    /* 
+        in (pulgada)
+        1 in = 2.54 cm = 96 px en CSS.
+        Unidad estándar de referencia en diseño para impresión.
+    */
+    width: 50in;
+    height: 50in;
+}

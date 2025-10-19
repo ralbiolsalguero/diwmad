@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    /* Elimina el margen externo por defecto de todos los elementos. */
+    padding: 0;
+    /* Elimina el relleno interno por defecto de todos los elementos. */
+}
+
+.menu{
+    background: #000;
+    /* Asigna color de fondo negro al elemento con clase .menu. */
+    width: 100%;
+    /* El ancho del elemento ocupa el 100% del contenedor padre. */
+    height: 100px;
+    /* Altura fija de 100 píxeles. */
+}
+
+div.container{
+    background: blue;
+    /* Fondo azul para el contenedor principal. */
+    width: 100%;
+    /* Ancho total del viewport. */
+    height: 100vh;
+    /* Altura igual al 100% del alto de la ventana visible del navegador. */
+
+
+    /* Funcion calc */
+    height: calc(100vh - 100px);
+    /* Calcula la altura restando 100px al total del viewport, útil para ajustar después del menú. */
+
+    /* Funcion min */
+    width: min(200px, 25%);
+    /* Asigna el valor menor entre 200px y el 25% del ancho disponible. */
+
+    /* Funcion max */
+    width: max(300px, 25%);
+    /* Asigna el valor mayor entre 300px y el 25% del ancho disponible. */
+
+
+    /* FUNCION CLAMP */
+    width: clamp(100px, 25%, 300px);
+    /* Establece un valor flexible con límites: mínimo 100px, preferente 25%, máximo 300px. */
+    
+}
+
+h1::after{
+    content: attr(data-name);
+    /* Inserta el valor del atributo data-name justo después del texto del h1. */
+}

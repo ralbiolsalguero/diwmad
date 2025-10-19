@@ -1,0 +1,72 @@
+/* ---------- UNIDADES DE MEDIDA RELATIVAS EN CSS ---------- */
+/*
+    Las unidades relativas dependen del contexto o del tamaño de otros elementos.
+    A diferencia de las unidades fijas, se adaptan al tamaño del texto, 
+    de la ventana o del elemento padre.
+*/
+
+:root {
+    font-size: 50px;
+    /* 
+        :root representa el elemento <html>.
+        Aquí establecemos el tamaño base de fuente para el documento.
+        Se usará como referencia para las unidades REM.
+    */
+}
+
+body {
+    font-size: 20px;
+    /* 
+        Tamaño base de fuente del cuerpo del documento.
+        Servirá de referencia para las unidades EM (relativas al elemento padre).
+    */
+}
+
+h1 {
+    /* 
+        🔹 REM (root em)
+        Relativa al tamaño de fuente del <html> (o :root), no del padre.
+        3rem = 3 × 50px = 150px
+    */
+    font-size: 3rem;
+
+    /* 
+        🔹 EM
+        Relativa al tamaño de fuente del elemento padre (body).
+        2em = 2 × 20px = 40px
+        Cuidado: Si se aplican varias definiciones consecutivas,
+        la última escrita será la que prevalezca (CSS cascade).
+    */
+    font-size: 2em;
+
+    /* 
+        🔹 EX
+        Relativa a la altura de la letra “x” del elemento.
+        Sirve para ajustar tamaños según la tipografía.
+        1ex ≈ 0.5em (aproximadamente).
+    */
+    font-size: 1ex;
+
+    /* 
+        🔹 CH
+        Relativa al ancho del carácter “0” (cero) del tipo de letra actual.
+        Ideal para definir anchos de texto con alineación monoespaciada.
+        2ch = el ancho de dos caracteres “0”.
+    */
+    font-size: 2ch;
+}
+
+div {
+    background: blue;
+    /* Crea un bloque azul visible */
+
+    /*
+        🔹 %
+        Relativa al tamaño del elemento contenedor (padre).
+        En este caso, el ancho será el 50% del ancho del elemento padre (<body>).
+    */
+    width: 50%;
+
+    height: 200px;
+    /* Altura fija, no relativa. */
+}

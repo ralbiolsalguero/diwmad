@@ -1,0 +1,49 @@
+/* ---------- UNIDADES FLEXIBLES EN CSS ---------- */
+/*
+    Las unidades flexibles permiten definir tamaños 
+    relativos al área visible del navegador (viewport).
+    
+    El "viewport" es la zona visible de la página en pantalla,
+    sin contar barras de desplazamiento ni elementos externos.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    /* Se eliminan márgenes y rellenos por defecto */
+}
+
+div {
+    background: lightskyblue;
+    /* Fondo azul claro para visualizar el tamaño del bloque */
+
+    /*
+        vw (viewport width)
+        1vw = 1% del ancho del viewport.
+        Ejemplo: si la pantalla mide 1200px de ancho → 50vw = 600px.
+    */
+    width: 50vw;
+
+    /*
+        vh (viewport height)
+        1vh = 1% de la altura del viewport.
+        Ejemplo: si la pantalla mide 800px de alto → 50vh = 400px.
+    */
+    height: 50vh;
+}
+
+h1 {
+    /*
+        vmin
+        1vmin = 1% del valor más pequeño entre el ancho y alto del viewport.
+        Ejemplo: si el ancho = 1200px y alto = 800px → 
+        1vmin = 8px → 10vmin = 80px.
+
+        vmax (no usado en este ejemplo)
+        1vmax = 1% del valor más grande entre ancho y alto del viewport.
+        Ejemplo: con los mismos datos, 1vmax = 12px → 10vmax = 120px.
+    */
+    font-size: 10vmin;
+    /* El tamaño del texto se adaptará automáticamente 
+        al tamaño de la ventana, sin necesidad de media queries. */
+}
