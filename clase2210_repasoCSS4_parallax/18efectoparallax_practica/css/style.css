@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    /* Elimina el margen externo de todos los elementos. */
+
+    padding: 0;
+    /* Elimina el relleno interno de todos los elementos. */
+
+    box-sizing: border-box;
+    /* Incluye borde y relleno dentro del tamaño total del elemento. */
+}
+
+section{
+    width: 100%;
+    /* El ancho ocupa todo el contenedor padre. */
+
+    height: 100vh;
+    /* La altura ocupa el 100% del alto visible del navegador. */
+}
+
+.sec1{
+    background: url("img/background4.jpg");
+    /* Aplica una imagen de fondo. */
+
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el área sin deformarse. */
+
+    background-position: center center;
+    /* Centra la imagen tanto horizontal como verticalmente. */
+
+    background-attachment: fixed;
+    /* Fija el fondo al viewport para crear el efecto parallax. */
+}
+
+.sec2{
+    background: url("img/background5.jpg");
+    /* Asigna otra imagen de fondo distinta. */
+
+    background-size: cover;
+    /* Ajusta la imagen para cubrir completamente el área. */
+
+    background-position: center center;
+    /* Centra la imagen en ambas direcciones. */
+
+    background-attachment: fixed;
+    /* Fija el fondo para mantener el efecto parallax. */
+}
+
+.sec3{
+    background: url("img/background6.jpg");
+    /* Asigna una tercera imagen de fondo. */
+
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen al contenedor. */
+
+    background-position: center center;
+    /* Centra la imagen en el medio. */
+
+    background-attachment: fixed;
+    /* Fija el fondo en su posición al hacer scroll. */
+}
+
+.sec4{
+    background: url("img/background7.jpg");
+    /* Asigna una cuarta imagen de fondo. */
+
+    background-size: cover;
+    /* Hace que la imagen cubra completamente el área visible. */
+
+    background-position: center center;
+    /* Centra la imagen tanto en vertical como en horizontal. */
+
+    background-attachment: fixed;
+    /* Mantiene la imagen fija al fondo del viewport. */
+}
+
+.sec-text{
+    width: 100%;
+    /* El ancho ocupa todo el contenedor padre. */
+
+    height: 200px;
+    /* Altura fija de 200 píxeles. */
+}

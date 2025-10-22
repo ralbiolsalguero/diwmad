@@ -1,0 +1,27 @@
+div{
+    width: 500px;
+    /* Define el ancho del div en 500 píxeles. */
+
+    height: 500px;
+    /* Define la altura del div en 500 píxeles. */
+    
+    /* Transparencia */
+    background-color: transparent;
+    /* Color de fondo totalmente transparente. */
+
+    background-color: #00000073;
+    /* Color hexadecimal con canal alfa (73), genera semitransparencia. */
+
+    background-color: rgba(0, 0, 0, 0.555);
+    /* Color con valores RGB y un nivel de opacidad (0.555). */
+
+    background-color: hsla(125, 80%, 50%, 40%);
+    /* Color en formato HSL con canal alfa (40%). */
+
+    background: red;
+    /* Fondo rojo opaco que sobrescribe los valores anteriores. */
+
+    /* Opacity */
+    opacity: 0.2;
+    /* Reduce la opacidad total del elemento (20%), incluyendo su contenido. */
+}

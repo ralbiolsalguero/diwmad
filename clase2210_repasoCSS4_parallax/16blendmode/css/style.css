@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    /* Elimina el margen externo de todos los elementos. */
+
+    padding: 0;
+    /* Elimina el relleno interno de todos los elementos. */
+}
+
+div{
+    width: 100vw;
+    /* Establece el ancho igual al 100% del ancho del viewport. */
+
+    height: 100vh;
+    /* Establece la altura igual al 100% del alto del viewport. */
+
+    background: url("img/background1.jpg"), url("img/background2.jpg"), yellow;
+    /* Aplica dos imágenes de fondo y un color de fondo amarillo. */
+
+    background-size: cover;
+    /* Hace que las imágenes cubran todo el área del div sin deformarse. */
+
+    background-position: center;
+    /* Centra las imágenes en el contenedor. */
+
+    /* BLEND MODE */
+    background-blend-mode: multiply;
+    /* Mezcla los fondos aplicando el modo “multiply” para combinar los colores. */
+
+    /*
+        -multiply
+        -screen
+        -overlay
+        -darken
+        -lighten
+        -color-dodge
+        -saturation
+        -color
+        -luminosity
+        -hue
+    */
+    /* Lista de posibles modos de mezcla que pueden aplicarse. */
+}

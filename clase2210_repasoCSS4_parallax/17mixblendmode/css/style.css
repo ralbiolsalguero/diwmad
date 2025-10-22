@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    /* Elimina los márgenes externos por defecto de todos los elementos. */
+
+    padding: 0;
+    /* Elimina el relleno interno por defecto de todos los elementos. */
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Define una lista de fuentes de sistema modernas. */
+}
+
+div{
+    width: 100vw;
+    /* El ancho ocupa el 100% del viewport horizontal. */
+
+    height: 100vh;
+    /* La altura ocupa el 100% del viewport vertical. */
+
+    background-image: url(img/background3.jpg);
+    /* Asigna una imagen de fondo al contenedor div. */
+
+    background-size: cover;
+    /* Ajusta la imagen para cubrir toda el área del contenedor sin deformarse. */
+}
+
+h1{
+    font-size: 80px;
+    /* Tamaño de fuente grande para el título. */
+
+    line-height: 100vh;
+    /* Ajusta la altura de línea igual al alto del viewport para centrar verticalmente el texto. */
+
+    text-align: center;
+    /* Centra el texto horizontalmente. */
+
+    text-transform: uppercase;
+    /* Convierte el texto a mayúsculas. */
+
+    mix-blend-mode: overlay;
+    /* Define cómo el texto se mezcla visualmente con el fondo detrás. */
+
+    /*
+        mix-blend-mode: normal;
+        mix-blend-mode: multiply;
+        mix-blend-mode: screen;
+        mix-blend-mode: overlay;
+        mix-blend-mode: darken;
+        mix-blend-mode: lighten;
+        mix-blend-mode: color-dodge;
+        mix-blend-mode: color-burn;
+        mix-blend-mode: hard-light;
+        mix-blend-mode: soft-light;
+        mix-blend-mode: difference;
+        mix-blend-mode: exclusion;
+        mix-blend-mode: hue;
+        mix-blend-mode: saturation;
+        mix-blend-mode: color;
+        mix-blend-mode: luminosity;
+    */
+    /* Lista de modos de fusión que pueden aplicarse para diferentes efectos visuales. */
+}

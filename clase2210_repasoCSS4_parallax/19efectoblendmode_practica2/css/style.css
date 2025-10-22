@@ -1,0 +1,35 @@
+
+*{
+    margin: 0;
+    /* Quita todos los márgenes que los navegadores ponen por defecto. */
+
+    padding: 0;
+    /* Quita todos los rellenos internos por defecto. */
+}
+
+div{
+    width: 100%;
+    /* El bloque (div) ocupa todo el ancho de la pantalla. */
+
+    height: 100vh;
+    /* “vh” significa “viewport height” o “alto de la pantalla”.
+        100vh = ocupa el 100% del alto visible del navegador. */
+
+    background: url("img/image.jpg"), url("img/image2.jpg");
+    /* Aquí se ponen dos imágenes como fondo, separadas por comas (,).
+        La primera imagen (image.jpg) está “encima” de la segunda (image2.jpg). */
+
+    background-size: contain;
+    /* Ajusta las imágenes para que quepan enteras dentro del bloque,
+        aunque puede que se vean márgenes a los lados. */
+
+    background-position: center center;
+    /* Centra las imágenes en medio, tanto horizontal como verticalmente. */
+
+    background-blend-mode: multiply;
+    /* ESTA ES LA MAGIA 
+        Hace que las dos imágenes se mezclen entre sí como si estuvieran superpuestas.
+        El modo “multiply” (multiplicar) oscurece los colores al mezclarlos.
+        Las zonas blancas desaparecen, las negras se mantienen, y todo se vuelve más intenso. */
+}
+

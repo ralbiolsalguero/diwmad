@@ -1,0 +1,53 @@
+div{
+    width: 500px;
+    /* Define el ancho del div en 500 píxeles. */
+
+    height: 500px;
+    /* Define la altura del div en 500 píxeles. */
+
+    margin: auto;
+    /* Centra el div horizontalmente dentro del contenedor. */
+
+    border: 1px solid #000;
+    /* Dibuja un borde de un píxel, color negro. */
+
+
+    /* fondo plano */
+    background-color: #123456;
+    /* Aplica un color de fondo mediante código hexadecimal. */
+
+    background: turquoise;
+    /* Cambia el fondo por un color plano llamado “turquoise”. */
+
+
+    /* gradientes */
+    background: linear-gradient(90deg, blue, orange);
+    /* Aplica un degradado lineal de izquierda a derecha entre azul y naranja. */
+
+    background: radial-gradient(orange, red);
+    /* Crea un degradado radial desde el centro (naranja) hacia los bordes (rojo). */
+
+
+    /* imagen de fondo */
+    background-image: url("img/wallpaper.jpg");
+    /* Inserta una imagen como fondo. */
+
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita. */
+
+    background-size: cover;
+    /* Escala la imagen para cubrir completamente el área del div. */
+
+    background-position: center center;
+    /* Centra la imagen tanto horizontal como verticalmente. */
+
+    background-attachment: fixed;
+    /* Hace que el fondo permanezca fijo al hacer scroll. */
+
+
+    background: url("img/wallpaper.jpg") no-repeat fixed center;
+    /* Combina las propiedades anteriores en una sola línea. */
+
+    background-size: cover;
+    /* Mantiene el tamaño de la imagen ajustado al contenedor. */
+}
