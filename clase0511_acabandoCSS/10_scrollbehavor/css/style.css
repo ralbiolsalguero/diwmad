@@ -1,51 +1,60 @@
+/* ---------- RESETEO GLOBAL ---------- */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0; /* Quita los márgenes por defecto de todos los elementos. */
+    padding: 0; /* Quita los rellenos por defecto. */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Define una familia de fuentes genéricas compatibles con casi todos los sistemas. */
 }
 
+/* ---------- EFECTO DE DESPLAZAMIENTO SUAVE ---------- */
 html {
     scroll-behavior: smooth;
+    /* Esta propiedad hace que, al hacer clic en un enlace interno (anchor),
+        el desplazamiento hacia esa parte de la página sea suave y no instantáneo.
+        Sin JavaScript, solo con CSS. */
 }
 
+/* ---------- ESTILOS DEL MENÚ (NAV) ---------- */
 nav {
-    width: 100%;
-    height: 50px;
-    background-color: blueviolet;
-    text-align: ceter;
+    width: 100%;          /* Ocupa todo el ancho de la página. */
+    height: 50px;         /* Altura del menú. */
+    background: #400a96;  /* Color de fondo morado oscuro. */
+    text-align: center;   /* Centra horizontalmente el contenido dentro del nav. */
 }
 
 nav a {
-    margin: 0 80px;
-    line-height: 50px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    color: #FFF;
-    font-size: 25px;
+    margin: 0 80px;          /* Espaciado horizontal entre enlaces. */
+    line-height: 50px;       /* Centra verticalmente el texto dentro del menú. */
+    letter-spacing: 2px;     /* Espacio entre letras. */
+    text-decoration: none;   /* Quita el subrayado. */
+    color: #FFF;             /* Texto blanco. */
+    font-size: 25px;         /* Tamaño de fuente grande. */
 }
 
+/* ---------- ESTILOS DE LOS ARTÍCULOS ---------- */
 article {
-    width: 50%;
-    margin: 100px auto;
-    padding: 20px;
-    border: 3px solid #400a967a;
-    border-radius: 10px;
+    width: 50%;                /* El artículo ocupa la mitad del ancho de la pantalla. */
+    margin: 100px auto;        /* Centrado horizontal y 100px de margen vertical. */
+    padding: 20px;             /* Espacio interno. */
+    border: 3px solid #400a967a; /* Borde morado semitransparente. */
+    border-radius: 10px;       /* Bordes redondeados. */
 }
 
 article h1 {
-    font-size: 45px;
+    font-size: 45px; /* Tamaño grande para los títulos. */
 }
 
 article p {
-    line-height: 27px;
-    font-size: 18px;
+    line-height: 27px; /* Espaciado entre líneas (mejora la legibilidad). */
+    font-size: 18px;   /* Tamaño de texto legible. */
 }
 
 article button {
-    width: 150px;
-    height: 40px;
-    margin: 20px 0;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
+    width: 150px;        /* Ancho del botón. */
+    height: 40px;        /* Alto del botón. */
+    margin: 20px 0;      /* Espacio superior e inferior. */
+    font-size: 14px;     /* Tamaño del texto. */
+    font-weight: 600;    /* Semi-negrita. */
+    text-transform: uppercase; /* Pone el texto del botón en mayúsculas. */
 }

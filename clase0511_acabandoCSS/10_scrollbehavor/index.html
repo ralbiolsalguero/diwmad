@@ -1,39 +1,65 @@
 <!DOCTYPE html>
+<!-- Indica que este documento es HTML5 (la versión moderna del estándar web). -->
+
 <html lang="en">
+<!-- Elemento raíz del documento. El atributo lang="en" indica que está en inglés. -->
+
 <head>
+    <!-- Cabecera del documento: contiene metadatos, título y estilos. -->
+
     <meta charset="UTF-8">
+    <!-- Codificación de caracteres UTF-8 (permite tildes, ñ, etc.). -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Obliga a Internet Explorer a usar su motor moderno (Edge). -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Hace que el diseño sea responsive (ajustado al ancho del dispositivo). -->
+
     <title>Document</title>
+    <!-- Título que aparece en la pestaña del navegador. -->
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <nav>
-        <a href="#art1">Articulo1</a>
-        <a href="#art2">Articulo2</a>
-        <a href="#art3">Articulo3</a>
-        <a href="#art4">Articulo4</a>
-    </nav>
+     <!-- ---------- MENÚ DE NAVEGACIÓN ---------- -->
+     <nav>
+          <!-- Cada enlace apunta a un artículo por su ID -->
+          <a href="#art1">Articulo1</a>
+          <a href="#art2">Articulo2</a>
+          <a href="#art3">Articulo3</a>
+          <a href="#art4">Articulo4</a>
+          <!-- Al hacer clic en cualquiera de estos enlaces, se desplazará suavemente hasta el artículo correspondiente. -->
+     </nav>
 
-    <article id="art1">
-        <h1>Mi titulo 1</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, ex cum. Facere delectus hic amet rerum, voluptatem, sapiente, nemo quae blanditiis asperiores tempora suscipit soluta quia est ad incidunt itaque!</p>
-        <button>Click aquí</button>
-    </article>
-    <article id="art2">
-        <h1>Mi titulo 2</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, ex cum. Facere delectus hic amet rerum, voluptatem, sapiente, nemo quae blanditiis asperiores tempora suscipit soluta quia est ad incidunt itaque!</p>
-        <button>Click aquí</button>
-    </article>
-    <article id="art3">
-        <h1>Mi titulo 3</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, ex cum. Facere delectus hic amet rerum, voluptatem, sapiente, nemo quae blanditiis asperiores tempora suscipit soluta quia est ad incidunt itaque!</p>
-        <button>Click aquí</button>
-    </article>
-    <article id="art4">
-        <h1>Mi titulo 4</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, ex cum. Facere delectus hic amet rerum, voluptatem, sapiente, nemo quae blanditiis asperiores tempora suscipit soluta quia est ad incidunt itaque!</p>
-        <button>Click aquí</button>
-    </article>
+     <!-- ---------- ARTÍCULO 1 ---------- -->
+     <article id="art1">
+          <!-- El id="art1" permite que los enlaces del menú sepan a dónde desplazarse. -->
+          <h1>Mi titulo 1</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perferendis laudantium labore molestiae, adipisci corporis, ducimus, dolorum in vero quis ab fuga quos cupiditate alias odit inventore reprehenderit minus cumque.</p>
+          <button>Click aquí</button>
+     </article>
 
+     <!-- ---------- ARTÍCULO 2 ---------- -->
+     <article id="art2">
+          <h1>Mi titulo 2</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perferendis laudantium labore molestiae, adipisci corporis, ducimus, dolorum in vero quis ab fuga quos cupiditate alias odit inventore reprehenderit minus cumque.</p>
+          <button>Click aquí</button>
+     </article>
+
+     <!-- ---------- ARTÍCULO 3 ---------- -->
+     <article id="art3">
+          <h1>Mi titulo 3</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perferendis laudantium labore molestiae, adipisci corporis, ducimus, dolorum in vero quis ab fuga quos cupiditate alias odit inventore reprehenderit minus cumque.</p>
+          <button>Click aquí</button>
+     </article>
+
+     <!-- ---------- ARTÍCULO 4 ---------- -->
+     <article id="art4">
+          <h1>Mi titulo 4</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perferendis laudantium labore molestiae, adipisci corporis, ducimus, dolorum in vero quis ab fuga quos cupiditate alias odit inventore reprehenderit minus cumque.</p>
+          <button>Click aquí</button>
+     </article>
 </body>
 </html>

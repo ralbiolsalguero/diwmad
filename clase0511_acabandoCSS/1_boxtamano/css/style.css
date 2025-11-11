@@ -1,20 +1,25 @@
-div {
-    width: 500px;
-    height: 400px;
-    max-width: 500px;
-    min-width: 500px;
 
-    /*
+/* Seleccionamos TODOS los <div> del documento */
+div{
+    background-color: blue; /* Pinta el fondo del div en azul. */
+
+    /* --- Tamaño base --- */
+    width: 500px;   /* Ancho fijo de 500 píxeles. */
+    height: 400px;  /* Alto fijo de 400 píxeles (pero ojo, abajo se sobreescribe). */
+
+    /* --- Límites horizontales --- */
+    max-width: 500px; /* El ancho NUNCA podrá superar 500px. */
+    min-width: 200px; /* El ancho NUNCA podrá ser menor que 200px. */
+
+    /* Límites verticales (comentados, no aplican):
     max-height: 500px;
-    min-height: 200px
+    min-height: 200px;
     */
 
-    /*Altura calculadas con calc*/
-    /*
-    100vh = 100%
-    
-    */
+    /* --- Altura calculada con calc() ---
+        100vh = 100% de la altura visible de la ventana (viewport).
+        Aquí restamos 100px a toda la altura de la ventana.
+        IMPORTANTE: en CSS, si repites la misma propiedad (height),
+        manda la ÚLTIMA declaración. Por eso esto sustituye al height: 400px de arriba. */
     height: calc(100vh - 100px);
-    background-color: red;
-
 }

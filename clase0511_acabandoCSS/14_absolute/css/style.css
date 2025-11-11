@@ -1,16 +1,33 @@
+/* ---------- EXPLICACIÓN GENERAL ---------- */
+/*
+    El posicionamiento absoluto saca el elemento del flujo normal de la página.
+    Esto significa que los demás elementos se comportan como si no existiera.
+
+    Si el elemento padre (contenedor) tiene "position: relative;",
+    el elemento hijo con "position: absolute;" se posiciona
+    respecto a ese contenedor padre.
+    Si NO hay padre con position distinto de static,
+    el elemento se posiciona respecto al documento (pantalla completa).
+*/
+
+/* ---------- CONTENEDOR PADRE ---------- */
 .contenedor {
-    width: 600px;
-    height: 600px;
-    margin: auto;
-    background: #979797;
-    position: relative;
+    width: 600px;           /* Ancho del contenedor principal. */
+    height: 600px;          /* Alto del contenedor. */
+    margin: auto;           /* Centra el contenedor horizontalmente en la página. */
+    background: #979797;    /* Color de fondo gris. */
+    position: relative;     /* 🔑 Clave: define el punto de referencia para el hijo absolute. */
 }
+
+/* ---------- CAJA HIJA (ABSOLUTA) ---------- */
 div.box {
-    background: violet;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    position: absolute;
-    top: 0;
-    right: 200px;
+    background: violet;     /* Color de fondo violeta. */
+    width: 200px;           /* Ancho del cuadrado. */
+    height: 200px;          /* Alto del cuadrado. */
+    margin: 20px;           /* Margen (no afecta a la posición absoluta, solo al tamaño visual interno). */
+    position: absolute;     /* Saca el elemento del flujo normal y permite ubicarlo libremente. */
+
+    /* Coordenadas dentro del contenedor padre (que tiene position: relative) */
+    top: 0;                 /* Pega la caja al borde superior del contenedor. */
+    right: 200px;           /* Deja 200px de distancia desde el borde derecho del contenedor. */
 }

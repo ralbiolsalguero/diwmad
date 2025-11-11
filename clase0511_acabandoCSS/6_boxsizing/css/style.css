@@ -1,18 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
+/* 
+---------- REGLA GLOBAL ----------
+El asterisco (*) selecciona TODOS los elementos del documento.
+Esto se llama "reset CSS" o "reset básico".
+*/
+* {
+    margin: 0;           /* Quita todos los márgenes por defecto. */
+    padding: 0;          /* Quita todos los rellenos por defecto. */
     box-sizing: border-box;
-    /*Por defecto -> box-sizing: content-box
-    width: 200px;
-    padding: 20px;
-    border: 10px;
-    200 + 20 +20 +10 +10 = 260px
+    /* CLAVE IMPORTANTE:
+        Cambia la forma en que el navegador calcula el tamaño total de los elementos.
+        Con "border-box", el ancho y el alto incluyen:
+            ➜ contenido
+            ➜ padding
+            ➜ border
+        Esto hace que el diseño sea más predecible y fácil de controlar.
     */
 }
 
-div{
-    background-color: #0090c9;
-    width: 100%;
-    height: 200px;
-    padding: 20px;
+/* ---------- ESTILO DEL DIV ---------- */
+div {
+    background-color: #0090c9; /* Azul celeste */
+    width: 100%;               /* Ocupará todo el ancho del contenedor (la página). */
+    height: 200px;             /* Altura fija de 200 píxeles. */
+    padding: 20px;             /* Relleno interno de 20 píxeles por cada lado. */
 }

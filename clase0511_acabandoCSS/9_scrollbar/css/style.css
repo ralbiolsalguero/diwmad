@@ -1,63 +1,69 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ---------- RESETEO GLOBAL ---------- */
+* {
+    margin: 0;             /* Elimina márgenes por defecto. */
+    padding: 0;            /* Elimina rellenos por defecto. */
+    box-sizing: border-box;/* Hace que width y height incluyan padding y borde. */
 }
 
 body {
-    background: #f2f2f2;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f2f2f2;   /* Color de fondo gris claro. */
+    font-family: 'Open Sans'; /* Fuente de texto. */
 }
 
+/* ---------- CONTENEDOR PRINCIPAL ---------- */
 .contenedor {
-    width: 500px;
-    height: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 4px;
-    overflow: auto;
+    width: 500px;          /* Ancho del cuadro. */
+    height: 500px;         /* Alto del cuadro (para que se pueda hacer scroll dentro). */
+    margin: 50px auto;     /* Centrado horizontal y margen superior de 50px. */
+    padding: 20px;         /* Espacio interno. */
+    background: #fff;      /* Fondo blanco. */
+    border-radius: 4px;    /* Bordes redondeados. */
+    overflow: auto;        /* Muestra barras de scroll si el contenido no cabe. */
 }
 
-.contenedor h1{
-    font-size: 38px;
-    font-weight: 600;
-    color: #000;
+.contenedor h1 {
+    font-size: 38px;       /* Tamaño grande del título. */
+    font-weight: 600;      /* Negrita media. */
+    color: #000;           /* Color negro. */
 }
 
 .contenedor hr {
-    background-color: #00a2ff;
-    width: 20%;
-    height: 5px;
-    border: none;
-    margin: 20px 0;
-    border-radius: 50px;
-
+    background: #00a2ff;   /* Color azul para la línea. */
+    width: 20%;            /* Ocupa el 20% del ancho del contenedor. */
+    height: 5px;           /* Grosor de la línea. */
+    border: none;          /* Sin borde externo. */
+    margin: 20px 0;        /* Separación vertical. */
+    border-radius: 50px;   /* Bordes redondeados para que parezca una pastilla. */
 }
 
 p {
-    margin-bottom: 20px;
-    line-height: 28px;
-    font-size: 16px;
-    color: #414141;
+    margin-bottom: 20px;   /* Espacio entre párrafos. */
+    line-height: 28px;     /* Altura entre líneas para mejor lectura. */
+    font-size: 16px;       /* Tamaño de letra. */
+    color: #414141;        /* Gris oscuro. */
 }
 
-/*PERSONALIZAR EL SCROLL BAR*/
+/* ---------- PERSONALIZAR SCROLL BAR ---------- */
+/* Las siguientes reglas funcionan en navegadores basados en WebKit (Chrome, Edge, Safari) */
 
+/* Scrollbar general del BODY (la página completa) */
 body::-webkit-scrollbar {
-    width: 10px;
-    border: rgba(128, 128, 128, 0.5);
+    width: 10px; /* Grosor del scroll vertical */
+    background: rgba(128, 128, 128, 0.5); /* Color gris semitransparente del fondo del scroll */
 }
 
+/* Parte que se mueve (el “pulgarcito” del scroll) */
 body::-webkit-scrollbar-thumb {
-    background: #414141;
+    background: #414141; /* Color gris oscuro */
 }
 
+/* Scrollbar SOLO dentro del contenedor blanco */
 .contenedor::-webkit-scrollbar {
-    width: 7px;
+    width: 7px; /* Más delgado que el del body */
 }
 
+/* El “pulgarcito” dentro del contenedor */
 .contenedor::-webkit-scrollbar-thumb {
-    background: #00a2ff;
-    border-radius: 5px;
+    background: #00a2ff; /* Azul brillante */
+    border-radius: 5px;  /* Redondeado, aspecto más moderno */
 }

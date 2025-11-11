@@ -1,15 +1,35 @@
 div {
-    width: 200px;
-    height: 200px;
+    width: 200px;    /* Ancho del cuadro (contenido principal) */
+    height: 200px;   /* Alto del cuadro */
 
+    /* --- Borde básico necesario para poder aplicar border-image --- */
     border: 42px solid black;
+    /* 
+        IMPORTANTE: Para usar border-image, primero hay que tener un borde definido.
+        Aquí se indica un borde sólido negro de 42px de grosor (sirve de referencia).
+    */
+
     border-image-width: 1;
-    border-image-source: url("../../img/background1.jpg");
+    /* Ajusta el grosor con el que se aplicará la imagen del borde.
+        Valor 1 significa “usa el mismo tamaño que el borde original” (42px en este caso). */
+
+    border-image-source: url(img/background1.jpg);
+    /* Indica la imagen que se usará como borde. 
+        Se debe poner la ruta a la imagen (en este caso en una carpeta llamada img). */
+
     border-image-slice: 25%;
+    /* 
+        Divide la imagen en 9 partes (como un marco):
+        4 esquinas, 4 bordes y una zona central.
+        El valor 25% significa que corta un 25% desde cada lado.
+        Esas partes se estiran o repiten para formar el borde completo.
+    */
+
     border-image-repeat: repeat;
-    /*
-    repeat -> repite el patron de la imagen las veces necesarias
-    stretch -> estirar la imagen para encajarla
-    round -> repite, pero ajustando para que encaje sin cortar
+    /* 
+        Indica cómo se “rellenan” los bordes con la imagen.
+        - repeat: repite el patrón de la imagen las veces necesarias.
+        - stretch: estira la imagen para encajarla.
+        - round: repite, pero ajustando para que encaje sin cortar.
     */
 }

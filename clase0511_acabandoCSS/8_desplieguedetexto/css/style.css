@@ -1,9 +1,23 @@
+/* ----------- ESTILOS CSS ----------- */
+
 p {
     margin: 0;
+    /* Quita los márgenes por defecto de los párrafos.
+        Así el texto se ajusta mejor al formato en columnas. */
 }
 
 #despliegue {
+    /* Este ID se aplicará al <div> que contiene todo el texto. */
+
     column-count: 3;
+    /* Divide el texto en 3 columnas automáticas (como un periódico). */
+
     column-gap: 50px;
+    /* Deja un espacio de 50 píxeles entre las columnas. */
+
     column-rule: 2px dashed blue;
+    /* Dibuja una línea entre columnas.
+        - 2px → grosor de la línea.
+        - dashed → estilo de línea discontinua.
+        - blue → color azul. */
 }

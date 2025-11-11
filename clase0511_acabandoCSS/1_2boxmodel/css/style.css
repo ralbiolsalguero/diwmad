@@ -1,11 +1,21 @@
 div {
-    background-color: #a3a3a3;
-    width: 200px;
-    height: 200px;
+    background-color: #a3a3a3; /* Color de fondo gris (código hexadecimal). */
+    width: 200px;              /* Ancho del contenido: 200 píxeles. */
+    height: 200px;             /* Alto del contenido: 200 píxeles. */
+
     display: inline-block;
+    /* Hace que el div se comporte como un bloque en línea:
+        - Se puede colocar junto a otros elementos.
+        - Mantiene ancho y alto (a diferencia de los elementos en línea normales). */
 
     padding: 20px;
-    margin: 50px;
-    border: 5px solid #000;
+    /* Relleno interno: espacio entre el contenido (el texto <p>) y el borde del div.
+        Aquí hay 20px en cada lado (arriba, abajo, izquierda y derecha). */
 
+    margin: 50px;
+    /* Margen externo: espacio entre el div y otros elementos o el borde del documento.
+        Aquí deja 50px por cada lado. */
+
+    border: 5px solid #000;
+    /* Borde negro sólido de 5 píxeles de grosor alrededor del div. */
 }

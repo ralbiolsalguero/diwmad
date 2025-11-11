@@ -1,14 +1,33 @@
 <!DOCTYPE html>
+<!-- Indica que el documento usa HTML5 (versión moderna). -->
+
 <html lang="en">
+<!-- Elemento raíz del documento. lang="en" indica que el contenido está en inglés. -->
+
 <head>
+    <!-- Cabecera: configuración y estilos del documento. -->
+
     <meta charset="UTF-8">
+    <!-- Codificación UTF-8 (permite acentos, ñ, etc.). -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Obliga a Internet Explorer a usar su motor moderno (modo Edge). -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Hace que el diseño se adapte al ancho del dispositivo (responsive). -->
+
     <title>Document</title>
+    <!-- Título que aparece en la pestaña del navegador. -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="contenedor">
-        <div class="box"></div>
-    </div>
+     <!-- ---------- CONTENIDO VISIBLE ---------- -->
+
+     <div class="contenedor">
+          <!-- Este es el contenedor "padre" con position: relative -->
+          <div class="box"></div>
+          <!-- Esta es la caja "hija" con position: absolute, colocada dentro del padre. -->
+     </div>
 </body>
 </html>

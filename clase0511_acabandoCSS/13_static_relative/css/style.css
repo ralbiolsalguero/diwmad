@@ -1,13 +1,26 @@
+/* ---------- ESTILOS CSS ---------- */
+
 div {
-    background: violet;
-    width: 300px;
-    height: 300px;
-    margin: 20px;
+    background: violet;  /* Fondo violeta. */
+    width: 300px;        /* Ancho del div: 300 píxeles. */
+    height: 300px;       /* Alto del div: 300 píxeles. */
+    margin: 20px;        /* Margen exterior de 20 píxeles por todos los lados. */
 
+    /* ---------- POSICIONAMIENTO ---------- */
+
+    /* 1️ position: static (por defecto)
+        Es el comportamiento natural de todos los elementos HTML.
+        - NO responde a propiedades como top, left, right o bottom.
+        - Se posiciona según el flujo normal del documento (uno debajo del otro). */
     position: static;
+
+    /* 2️ position: relative
+        Hace que el elemento se posicione de forma RELATIVA a su posición original.
+        - Mantiene su espacio en el flujo normal.
+        - Se puede mover con top, left, right o bottom sin afectar a los demás elementos.
+    */
     position: relative;
-    top:100px;
-    left: 200px;
 
-
+    top: 100px;  /* Mueve el div 100 píxeles hacia abajo desde su posición original. */
+    left: 200px; /* Mueve el div 200 píxeles hacia la derecha desde su posición original. */
 }

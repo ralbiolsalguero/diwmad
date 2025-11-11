@@ -1,40 +1,68 @@
 div {
-    width: 200px;
-    height: 200px;
+    width: 200px;  /* Ancho del div */
+    height: 200px; /* Alto del div */
 
-    /*Configuración de bordes*/
+    /* ---------- CONFIGURACIÓN DE BORDES ---------- */
+
+    /* Se pueden definir los 4 lados en una sola línea:
+        (arriba, derecha, abajo, izquierda)
+        aquí se definen distintos grosores: */
     border-width: 5px 2px 10px 20px;
+    /* ↑ arriba 5px | derecha 2px | abajo 10px | izquierda 20px */
+
+    /* Estilo de cada lado del borde */
     border-style: solid dashed dotted double;
+    /* ↑ arriba sólido | derecha discontinuo (dashed) | abajo punteado (dotted) | izquierda doble línea (double) */
 
+    /* Color de cada lado */
     border-color: blue red violet green;
+    /* ↑ arriba azul | derecha rojo | abajo violeta | izquierda verde */
 
-    border: 5px solid red; /*Shorthand*/
+    /* IMPORTANTE:
+        justo después se aplica un “atajo” (shorthand) que sobreescribe todo lo anterior. */
 
-   /*border-top: 10px solid blue;
+    /* --- ATAJO (shorthand) --- */
+    border: 5px solid red;
+    /* Esto pone todos los lados con 5px, estilo sólido, color rojo.
+        Así que las tres líneas anteriores quedan anuladas. */
+
+    /* También podríamos definir cada lado por separado así (comentado): */
+    /*
+    border-top: 10px solid blue;
     border-right: 5px dotted yellow;
     border-bottom: 10px solid blue;
-    border-left: 15px dashed red;*/
+    border-left: 15px dashed red;
+    */
+
+    /* ---------- BORDES REDONDEADOS ---------- */
 
     border-radius: 10px;
+    /* Redondea todas las esquinas 10px. (borde más suave) */
+
+    /* Si ponemos dos valores:
+        - 1er valor: arriba izquierda y abajo derecha.
+        - 2º valor: arriba derecha y abajo izquierda. */
     border-radius: 20px 50px;
-    /*1 valor -> arriba izquierda y abajo dereacha,
-    2 valor -> arriba derecha y abajo izquierda*/
 
+    /* Con tres valores:
+        - 1º: arriba izquierda.
+        - 2º: arriba derecha y abajo izquierda.
+        - 3º: abajo derecha. */
     border-radius: 20px 50px 80px;
-    /*
-    1 -> Arriba izquierda
-    2 -> Arriba derecha y abajo izquierda
-    3 -> abajo derecha
-    */
 
+    /* Con cuatro valores (en sentido de las agujas del reloj):
+        1º: arriba izquierda
+        2º: arriba derecha
+        3º: abajo derecha
+        4º: abajo izquierda */
     border-radius: 20px 50px 80px 40px;
 
-    /*
-    border-top-left-radiud: 80px;
-    */
+    /* Cada línea de border-radius sobreescribe la anterior,
+        así que la única que queda activa es la última. */
 
-
-    
-
-
+    /* También se puede ajustar cada esquina por separado: */
+    border-top-left-radius: 80px;    /* esquina superior izquierda muy redondeada */
+    border-top-right-radius: 50px;   /* esquina superior derecha menos redonda */
+    border-bottom-left-radius: 20px; /* esquina inferior izquierda poco redonda */
+    border-bottom-right-radius: 10px;/* esquina inferior derecha casi cuadrada */
 }

@@ -1,13 +1,25 @@
-.box{
-    text-align: center;
-    margin: 200px auto;
+/* ---------- CLASE BOX ---------- */
+.box {
+    text-align: center; /* Centra el contenido (inputs, botones, enlaces) dentro del div. */
+    margin: 200px auto; /* Margen de 200px arriba y abajo, centrado horizontalmente (auto). */
 }
 
+/* ---------- ESTILO PARA VARIOS ELEMENTOS A LA VEZ ---------- */
 input, a, button {
-    outline-color: blue;
-    outline-style: solid;
-    outline-width: 2px;
+    /* Se aplica a todos los <input>, <a> y <button>. */
 
+    outline-color: blue;  /* Color azul del contorno. */
+    outline-style: solid; /* Tipo de línea del contorno (sólido). */
+    outline-width: 2px;   /* Grosor del contorno (2 píxeles). */
+
+    /* --- ATAJO (shorthand) --- */
     outline: 1px solid red;
+    /* Esta línea combina las tres propiedades de arriba (color, estilo y grosor).
+        Así que anula las anteriores y deja el contorno rojo de 1px sólido. */
+
     outline: none;
+    /* Esta última línea quita completamente el contorno.
+        En CSS, la última propiedad con el mismo nombre gana,
+        por lo que “outline: none” desactiva todas las anteriores.
+        En este punto, no se verá ningún contorno. */
 }

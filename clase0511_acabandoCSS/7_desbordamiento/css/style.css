@@ -1,13 +1,20 @@
+/* ---------- ESTILOS CSS ---------- */
+
+/* Seleccionamos el elemento que tiene el id="desbordamiento" */
 #desbordamiento {
-    width: 250px;
-    height: 250px;
-    background-color: yellow;
-    padding: 20px;
+    width: 250px;               /* Ancho del contenedor (250 píxeles). */
+    height: 250px;              /* Alto del contenedor (250 píxeles). */
+    background-color: #ffdb39;  /* Fondo amarillo. */
+    padding: 20px;              /* Espacio interno entre el borde y el texto. */
+
+    /* ---------- DESBORDAMIENTO (overflow) ---------- */
     overflow: auto;
-    /*
-    - auto -> genera la barra scroll solo si hace falta
-    - scroll -> Siempre muestra la barra de desplazamiento
-    - visible -> El contenido que se sale se sigue viendo (no se corta)
-    - hidden -> Oculta todo el contenido que se sale del tamaño del contenedor
+    /* 
+        Esto controla qué pasa cuando el contenido NO cabe dentro del contenedor.
+        
+        - auto → Aparece la barra de desplazamiento (scroll) solo si hace falta.
+        - scroll → Siempre muestra barras de desplazamiento, aunque no sean necesarias.
+        - visible → El contenido que se sale se sigue viendo (no se corta).
+        - hidden → Oculta todo el contenido que se sale del tamaño del contenedor.
     */
 }

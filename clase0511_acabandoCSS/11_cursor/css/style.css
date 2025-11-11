@@ -1,42 +1,54 @@
+/* ---------- ESTILOS CSS ---------- */
+
 div {
-    width: 300px;
-    height: 300px;
-    background: turquoise;
-    margin: 50px auto;
+    width: 300px;             /* Ancho del cuadro. */
+    height: 300px;            /* Alto del cuadro. */
+    background: turquoise;    /* Color de fondo. */
+    margin: 50px auto;        /* Centrado horizontal con margen superior. */
 
-    /*Básicos*/
-    cursor: none;
-    cursor: default; /*Por defecto*/
-    cursor: pointer;
-    cursor: progress;
-    cursor: wait;
+    /* ---------- CURSORES ---------- */
+    /* Cambia la apariencia del puntero del ratón cuando pasa sobre el elemento. */
 
-    /*Celdas y seleccion*/
-    cursor: cell;
-    cursor: alias;
-    cursor: copy;
-    cursor: no-drop;
-    cursor: not-allowed;
-    cursor: grab;
-    cursor: grabbing;
+    /* Básicos */
+    cursor: none;        /* Oculta el cursor por completo. */
+    cursor: default;     /* Cursor normal (flecha por defecto). */
+    cursor: pointer;     /* Mano con dedo: se usa normalmente en enlaces o botones. */
+    cursor: progress;    /* Flecha + reloj: indica que está cargando algo pero se puede interactuar. */
+    cursor: wait;        /* Reloj/rueda de espera: indica que algo está procesando. */
 
-    /*Texto*/
-    cursor: text;
-    cursor: vertical-text;
+    /* Celdas y selección */
+    cursor: cell;        /* Indica selección de celdas (como en Excel). */
+    cursor: alias;       /* Indica que se está creando un alias o acceso directo. */
+    cursor: copy;        /* Indica que se va a copiar algo (aparece un + junto al puntero). */
+    cursor: no-drop;     /* Indica que no se puede soltar un elemento (en drag & drop). */
+    cursor: not-allowed; /* Indica que la acción no está permitida (símbolo prohibido). */
+    cursor: grab;        /* Mano abierta: indica que se puede “agarrar” un elemento. */
+    cursor: grabbing;    /* Mano cerrada: indica que el elemento está siendo arrastrado. */
 
-    /*Precisión y redimensionamiento*/
-    cursor: crosshair;
-    cursor: ew-resize;
-    cursor: ns-resize;
-    cursor: all-scroll;
-    cursor: move;
-    cursor: row-resize;
-    cursor: col-resize;
+    /* Texto */
+    cursor: text;          /* Indica que se puede seleccionar texto (barra vertical). */
+    cursor: vertical-text; /* Igual, pero en vertical. */
 
-    /*Zoom*/
-    cursor: zoom-in;
-    cursor: zoom-out;
+    /* Precisión y redimensionamiento */
+    cursor: crosshair;     /* Mira de precisión, se usa en editores gráficos. */
+    cursor: ew-resize;     /* Flechas ←→ (ajustar ancho horizontal). */
+    cursor: ns-resize;     /* Flechas ↑↓ (ajustar alto vertical). */
+    cursor: nesw-resize;   /* Flechas diagonales ↗↙. */
+    cursor: nwse-resize;   /* Flechas diagonales ↖↘. */
+    cursor: all-scroll;    /* Indica que se puede mover en cualquier dirección. */
+    cursor: move;          /* Flechas cruzadas, usado para mover objetos. */
+    cursor: row-resize;    /* Indica que se puede cambiar el tamaño de una fila. */
+    cursor: col-resize;    /* Indica que se puede cambiar el tamaño de una columna. */
 
+    /* Zoom */
+    cursor: zoom-in;       /* Lupa con + (acercar). */
+    cursor: zoom-out;      /* Lupa con - (alejar). */
+
+    /* Personalizado */
     cursor: url("../../img/cursor.png"), auto;
-
+    /* Usa una imagen personalizada como cursor.
+        - 'url(img/cursor.png)': ruta a la imagen del cursor.
+        - 'auto': valor de respaldo por si la imagen no carga.
+        Recomendación: el archivo .png debe ser pequeño (32x32px aprox.)
+            y con fondo transparente para verse bien. */
 }

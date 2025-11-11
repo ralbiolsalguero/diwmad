@@ -1,15 +1,35 @@
 <!DOCTYPE html>
+<!-- Indica que este documento usa HTML5 (versión moderna). -->
+
 <html lang="en">
+<!-- Raíz del documento. lang="en" indica que el idioma es inglés. -->
+
 <head>
+    <!-- Cabecera: configuración y estilos del documento (no se ve directamente). -->
+
     <meta charset="UTF-8">
+    <!-- Codificación UTF-8 (permite ñ, tildes, etc.). -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Obliga a Internet Explorer a usar su modo más moderno (Edge). -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Hace que la página sea responsive (ajustada al tamaño de pantalla). -->
+
     <title>Document</title>
+    <!-- Título que aparece en la pestaña del navegador. -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
-    <div>Elemento 1</div>
-    <div>Elemento 2</div>
-    <div>Elemento 3</div>
-    <div>Elemento 4</div>
+     <!-- ---------- CUERPO VISIBLE DE LA PÁGINA ---------- -->
+
+     <div>Elemento #1</div>
+     <div>Elemento #2</div>
+     <div style="display: none;">Elemento #3</div>
+     <!-- Este div no se mostrará porque tiene display:none directamente en su atributo style. -->
+
+     <div>Elemento #4</div>
 </body>
 </html>

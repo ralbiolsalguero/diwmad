@@ -1,16 +1,45 @@
+/* ---------- ESTILOS CSS ---------- */
 div {
-    width: 200px;
-    height: 200px;
-    background: turquoise;
-    margin: 10px;
-    border: 1px solid #000;
+    width: 200px;              /* Ancho de cada div. */
+    height: 200px;             /* Alto de cada div. */
+    background: turquoise;     /* Fondo color turquesa. */
+    margin: 10px;              /* Separación entre los divs. */
+    border: 1px solid #000;    /* Borde negro. */
 
+    /* ---------- PROPIEDAD display ---------- */
+
+    /* Por defecto, un <div> es un ELEMENTO EN BLOQUE */
     display: block;
+    /* Los elementos en bloque ocupan TODO el ancho disponible
+        y se apilan uno debajo del otro (verticalmente). */
+
+    /* ELEMENTO EN LÍNEA */
     display: inline;
+    /* Los elementos en línea se colocan uno al lado del otro (horizontalmente),
+        pero IGNORAN width y height. Solo ocupan el espacio del contenido. */
+
+    /* ELEMENTO EN LÍNEA-BLOQUE */
     display: inline-block;
+    /* Se comporta como un elemento en línea (en horizontal),
+        pero SÍ respeta width y height. Muy útil para menús o botones. */
+
+    /* ELEMENTO DE LISTA */
     display: list-item;
+    /* Hace que el elemento se comporte como un <li> (añade viñeta y estructura de lista). */
+
+    /* COMPORTAMIENTO DE TABLA (CELDA) */
     display: table-cell;
+    /* Simula el comportamiento de una celda <td> en una tabla. */
+
+    /* COMPORTAMIENTO DE TABLA (FILA) */
     display: table-row;
+    /* Simula el comportamiento de una fila <tr> en una tabla. */
+
+    /* OCULTAR ELEMENTOS */
+
     display: none;
+    /* Oculta completamente el elemento: no se muestra y NO ocupa espacio. */
+
     visibility: hidden;
+    /* Oculta visualmente el elemento, pero SIGUE ocupando su espacio. */
 }
