@@ -1,0 +1,51 @@
+/* Bloque de estilo interno, aquí se define el CSS directamente dentro del HTML. */
+
+img {
+    /* Selector que afecta a todas las etiquetas <img> del documento. */
+
+    width: 80%;
+    /* Ajusta el ancho de la imagen al 80% del ancho de su contenedor (por ejemplo, del body). */
+
+    filter: grayscale(80%);
+    /* Aplica un filtro que convierte la imagen en escala de grises al 80%.
+        0% = sin cambios, 100% = completamente en blanco y negro. */
+
+    filter: blur(5px);
+    /* Aplica un desenfoque de 5 píxeles a la imagen. 
+        Cuanto mayor es el valor, más difuminada aparece. */
+
+    filter: sepia(80%);
+    /* Da un tono marrón antiguo a la imagen (como las fotos antiguas).
+        0% = sin cambio, 100% = totalmente sepia. */
+
+    filter: saturate(80%);
+    /* Ajusta la saturación de los colores. 
+        Menos de 100% = colores apagados, más de 100% = colores intensos. */
+
+    filter: opacity(80%);
+    /* Ajusta la transparencia de la imagen. 
+        100% = opaca, 0% = completamente transparente. */
+
+    filter: brightness(80%);
+    /* Modifica la luminosidad de la imagen.
+        Menos de 100% = más oscura, más de 100% = más brillante. */
+
+    filter: contrast(80%);
+    /* Ajusta el contraste (diferencia entre claros y oscuros).
+        Menos de 100% = contraste reducido, más de 100% = más contraste. */
+
+    filter: hue-rotate(45deg);
+    /* Rota el tono de color (hue) de la imagen 45 grados en la rueda cromática.
+        Sirve para cambiar los colores sin alterar la luminosidad. */
+
+    filter: invert(70%);
+    /* Invierte parcialmente los colores de la imagen.
+        0% = normal, 100% = completamente invertido (como un negativo fotográfico). */
+
+    filter: drop-shadow(20px 10px 5px #000);
+    /* Añade una sombra externa al contorno de la imagen.
+        20px → desplazamiento horizontal
+        10px → desplazamiento vertical
+        5px → difuminado
+        #000 → color negro de la sombra. */
+}

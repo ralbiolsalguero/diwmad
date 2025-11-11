@@ -1,0 +1,18 @@
+/*MARGIN*/
+
+div {
+    width: 200px;
+    height: 200px;
+    background: blue;
+    display: inline-block;
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+
+    margin: 50px;
+    margin: 50px 20px;
+    margin: 80px 50px 20px;
+    margin: 80px 20px 50px 30px;
+
+}

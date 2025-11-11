@@ -1,0 +1,56 @@
+div {
+    width: 200px;
+    /* Define un ancho fijo para el contenedor, lo que forzará el texto a romperse 
+        si las palabras son demasiado largas. */
+
+    border: 1px solid #000;
+    /* Dibuja un borde negro para visualizar el área del div. */
+
+
+    /* =============================
+        PRIMERA MANERA: overflow-wrap
+        ============================= */
+
+    /*
+    overflow-wrap: normal;
+    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+    */
+
+    /* 
+        - normal → no rompe palabras, solo líneas completas.
+        - break-word → permite romper una palabra larga para que no sobresalga.
+        - anywhere → igual que break-word, pero rompe incluso si no hay espacios.
+    */
+
+
+    /* =============================
+        SEGUNDA MANERA: word-break
+        ============================= */
+
+    /* word-break: break-all; */
+
+    /*
+        Fuerza a que el texto se rompa en cualquier punto 
+        (sin importar si es dentro de una palabra).
+        Muy agresivo, útil cuando hay palabras sin espacios, como URLs largas.
+    */
+
+
+    /* =============================
+        TERCERA MANERA: hyphens
+        ============================= */
+
+    hyphens: auto;
+    /* 
+        Esta propiedad divide las palabras largas en sílabas y agrega un guion (-) 
+        automático al final de la línea.
+        
+        Requiere que el idioma esté definido en el HTML 
+        (por eso se usa lang="en" arriba).
+        
+        - none → no divide las palabras.
+        - manual → solo divide si usas el carácter especial &shy; (guion opcional).
+        - auto → el navegador decide dónde dividir según el idioma.
+    */
+}

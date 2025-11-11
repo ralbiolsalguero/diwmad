@@ -1,0 +1,45 @@
+body {
+    background: #187ef3;
+    /* Color de fondo azul (hexadecimal). */
+
+    text-align: center;
+    /* Centra horizontalmente todos los elementos en línea (como las imágenes). */
+}
+
+img {
+    margin: 100px 20px;
+    /* Deja 100px arriba y abajo, y 20px a los lados entre las imágenes. */
+}
+
+.logo {
+    box-shadow: 0 0 15px 10px #FFF;
+    /* Aplica una SOMBRA DE CAJA (box-shadow) blanca.
+        Estructura:
+        1º → desplazamiento horizontal: 0 (no se mueve a los lados)
+        2º → desplazamiento vertical: 0 (no se mueve hacia arriba/abajo)
+        3º → desenfoque: 15px (sombra difuminada)
+        4º → extensión: 10px (aumenta el tamaño visible de la sombra)
+        5º → color: blanco (#FFF)
+        
+        "box-shadow" aplica la sombra a la CAJA del elemento, 
+        no a la forma real de la imagen (por eso se verá un cuadrado o rectángulo).
+    */
+}
+
+.logo2 {
+    filter: drop-shadow(0 0 15px #FFF);
+    /* Aplica un filtro drop-shadow, que funciona similar a box-shadow, 
+        pero con una diferencia clave:
+        
+        "drop-shadow" se aplica al CONTORNO REAL de la imagen, 
+        teniendo en cuenta su transparencia (alpha).
+        Es decir, si la imagen tiene fondo transparente, 
+        la sombra se adapta a su silueta.
+        
+        Parámetros:
+        1º → desplazamiento horizontal: 0
+        2º → desplazamiento vertical: 0
+        3º → desenfoque: 15px
+        4º → color de la sombra: blanco (#FFF)
+    */
+}

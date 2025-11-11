@@ -1,0 +1,106 @@
+/* ==================================
+    ESTILOS DE TEXTO APLICADOS AL <h1>
+    ================================== */
+h1 {
+    /* Tamaño del texto */
+    font-size: 70px;
+    /* Define el tamaño de la fuente en píxeles. */
+
+    font-weight: 600;
+    /* Define el grosor del texto.
+        Valores comunes:
+        - normal (400)
+        - bold (700)
+        - puedes usar números entre 100 y 900 para diferentes pesos. */
+
+    font-style: italic;
+    /* Aplica cursiva (itálica) al texto. */
+
+    color: blue;
+    /* Color básico del texto (azul). */
+
+
+    /* ============================
+        ESPACIADOS ENTRE LETRAS Y PALABRAS
+        ============================ */
+    letter-spacing: 10px;
+    /* Espacio adicional entre cada letra. */
+
+    word-spacing: 20px;
+    /* Espacio adicional entre palabras. */
+
+
+    /* ============================
+        INTERLINEADO Y SANGRÍA
+        ============================ */
+    line-height: 50px;
+    /* Define la altura de cada línea del texto.
+        Si es menor que el tamaño del texto, se juntan las líneas.
+        Si es mayor, se separan. */
+
+    text-indent: 100px;
+    /* Sangría: deja un espacio al principio de la primera línea del texto. */
+
+
+    /* ============================
+        EFECTOS VISUALES EN EL TEXTO
+        ============================ */
+    -webkit-text-fill-color: crimson;
+    /* Color de relleno del texto (rojo carmesí). 
+        Solo funciona en navegadores basados en WebKit (Chrome, Safari). */
+
+    -webkit-text-stroke: 5px #000;
+    /* Añade un borde (contorno) de 5px negro al texto. */
+
+
+    /* ============================
+        ALINEACIÓN DEL TEXTO
+        ============================ */
+    text-align: start;
+    /* Alinea el texto al inicio según el idioma (izquierda en inglés/español). */
+
+    text-align: end;
+    /* Alinea el texto al final (derecha en inglés/español). */
+
+    text-align: center;
+    /* Centra horizontalmente el texto dentro de su contenedor. */
+
+    text-align: justify;
+    /* Justifica el texto: ajusta los espacios entre palabras 
+        para que las líneas comiencen y terminen al mismo nivel. */
+
+    /* Solo la última declaración (justify) se aplica,
+        las anteriores se sobrescriben. */
+
+
+    /* ============================
+        TRANSFORMACIÓN DE TEXTO
+        ============================ */
+    text-transform: uppercase;
+    /* Convierte todo el texto en mayúsculas. */
+
+    text-transform: lowercase;
+    /* Convierte todo el texto en minúsculas. */
+
+    text-transform: capitalize;
+    /* Convierte la primera letra de cada palabra en mayúscula. */
+
+    /* Solo la última (capitalize) tiene efecto. */
+}
+
+/* ==================================
+    PSEUDOELEMENTOS PARA <p>
+    ================================== */
+
+/* Primera línea del párrafo */
+p::first-line {
+    color: red;
+    /* Cambia el color de la primera línea del párrafo a rojo. */
+}
+
+/* Primera letra del párrafo */
+p::first-letter {
+    font-size: 50px;
+    /* Aumenta el tamaño de la primera letra del párrafo 
+        (efecto típico en libros o periódicos). */
+}

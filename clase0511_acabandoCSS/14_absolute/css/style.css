@@ -1,0 +1,16 @@
+.contenedor {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    background: #979797;
+    position: relative;
+}
+div.box {
+    background: violet;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    position: absolute;
+    top: 0;
+    right: 200px;
+}

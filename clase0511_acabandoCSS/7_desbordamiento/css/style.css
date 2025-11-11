@@ -1,0 +1,13 @@
+#desbordamiento {
+    width: 250px;
+    height: 250px;
+    background-color: yellow;
+    padding: 20px;
+    overflow: auto;
+    /*
+    - auto -> genera la barra scroll solo si hace falta
+    - scroll -> Siempre muestra la barra de desplazamiento
+    - visible -> El contenido que se sale se sigue viendo (no se corta)
+    - hidden -> Oculta todo el contenido que se sale del tamaño del contenedor
+    */
+}

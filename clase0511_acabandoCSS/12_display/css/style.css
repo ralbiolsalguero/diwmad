@@ -1,0 +1,16 @@
+div {
+    width: 200px;
+    height: 200px;
+    background: turquoise;
+    margin: 10px;
+    border: 1px solid #000;
+
+    display: block;
+    display: inline;
+    display: inline-block;
+    display: list-item;
+    display: table-cell;
+    display: table-row;
+    display: none;
+    visibility: hidden;
+}

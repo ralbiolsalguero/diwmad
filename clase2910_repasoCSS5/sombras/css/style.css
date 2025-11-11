@@ -1,0 +1,57 @@
+
+div {
+    width: 300px;
+    /* Anchura del div (300 píxeles). */
+
+    height: 300px;
+    /* Altura del div (300 píxeles). */
+
+    background-color: gray;
+    /* Fondo gris para que la sombra se aprecie mejor. */
+
+    margin: 50px auto;
+    /* Margen superior e inferior de 50 píxeles. 
+        "auto" en los lados derecho e izquierdo centra el div horizontalmente en la pantalla. */
+
+
+    /* =========================
+        SOMBRAS CON BOX-SHADOW
+        ========================= */
+
+    box-shadow: 10px 10px 10px 0 #000;
+    /* Crea una sombra en torno al contenedor.
+        Los valores representan:
+        1º → desplazamiento horizontal (10px a la derecha)
+        2º → desplazamiento vertical (10px hacia abajo)
+        3º → desenfoque (10px)
+        4º → extensión (0px, es decir, sin expandir el tamaño de la sombra)
+        5º → color (#000 = negro)
+    */
+
+
+    /* =========================
+        SOMBRAS MÚLTIPLES
+        ========================= */
+    box-shadow: 
+        2px 2px 5px 5px #AAA,   /* sombra clara y pequeña */
+        6px 6px 5px 10px #777,  /* sombra media y más grande */
+        12px 12px 5px 20px #444; /* sombra más oscura y más expandida */
+
+    /* IMPORTANTE:
+        Si se declaran varias sombras separadas por comas, se aplican TODAS.
+        Pero si se declaran dos veces "box-shadow" (como aquí), la segunda sobrescribe a la primera.
+        Por tanto, solo las sombras múltiples se aplicarán en el resultado final.
+    */
+}
+
+h1 {
+    text-shadow: 5px 0 5px #000;
+    /* Aplica sombra al texto.
+        1º → desplazamiento horizontal: 5px (hacia la derecha)
+        2º → desplazamiento vertical: 0 (no se mueve hacia arriba ni hacia abajo)
+        3º → desenfoque: 5px
+        4º → color de la sombra: negro (#000)
+        
+        Esto crea un efecto de sombra suave y lateral sobre el texto "Hola mundo".
+    */
+}

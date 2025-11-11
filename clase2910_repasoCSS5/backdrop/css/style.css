@@ -1,0 +1,89 @@
+
+* {
+    margin: 0;
+}
+/* El asterisco (*) selecciona todos los elementos del documento.
+    Esta regla elimina los márgenes predeterminados del navegador para que no haya espacios no deseados. */
+
+body {
+    margin: 0;
+    /* Elimina cualquier margen del cuerpo de la página. */
+
+    height: 100vh;
+    /* "vh" significa "viewport height", o altura de la ventana visible.
+        100vh = ocupa el 100% de la altura del navegador. */
+
+    background: url("img/background5.jpg");
+    /* Establece una imagen de fondo proveniente de la carpeta "img". */
+
+    background-size: cover;
+    /* Hace que la imagen de fondo se escale para cubrir toda la pantalla, aunque se recorte. */
+
+    background-position: center;
+    /* Centra la imagen de fondo. */
+
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita si es más pequeña que la pantalla. */
+}
+
+div {
+    width: 100%;
+    /* El div ocupa todo el ancho del documento. */
+
+    height: 100vh;
+    /* Ocupa toda la altura visible del navegador. */
+
+    /* A continuación vienen las propiedades "backdrop-filter".
+        Estas modifican el fondo *a través* del elemento, es decir, aplican filtros
+        a lo que hay detrás del div, no al propio div. */
+
+    backdrop-filter: blur(15px);
+    /* Difumina el fondo 15 píxeles. */
+
+    backdrop-filter: brightness(20%);
+    /* Reduce la luminosidad del fondo al 20%, haciéndolo mucho más oscuro. */
+
+    backdrop-filter: contrast(40%);
+    /* Disminuye el contraste del fondo, haciendo que las diferencias entre claros y oscuros sean menos notorias. */
+
+    backdrop-filter: grayscale(50%);
+    /* Convierte el fondo a escala de grises al 50%. */
+
+    backdrop-filter: hue-rotate(120deg);
+    /* Rota el tono del color 120 grados (cambia los colores). */
+
+    backdrop-filter: invert(70%);
+    /* Invierte los colores en un 70%. */
+
+    backdrop-filter: opacity(20%);
+    /* Hace el fondo más transparente (solo afecta visualmente al filtro, no al div). */
+
+    backdrop-filter: sepia(90%);
+    /* Da un tono marrón amarillento (efecto vintage). */
+
+    backdrop-filter: saturate(80%);
+    /* Reduce la saturación (intensidad de los colores). */
+}
+
+/* IMPORTANTE:
+    Al igual que con "filter", solo se aplica el ÚLTIMO "backdrop-filter".
+    En este caso, únicamente se aplicará "saturate(80%)".
+    Para que todos los efectos funcionen a la vez, deben ir en una sola línea, así: 
+    
+    backdrop-filter: blur(15px) brightness(20%) contrast(40%) grayscale(50%)
+                    hue-rotate(120deg) invert(70%) opacity(20%) sepia(90%) saturate(80%);
+*/
+
+h1 {
+    text-align: center;
+    /* Centra el texto horizontalmente. */
+
+    line-height: 100vh;
+    /* Hace que el texto se centre verticalmente dentro del div al ocupar toda la altura de la pantalla. */
+
+    font-size: 80px;
+    /* Tamaño grande para el texto del encabezado. */
+
+    color: #FFF;
+    /* Color blanco del texto. */
+}

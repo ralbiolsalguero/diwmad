@@ -1,0 +1,64 @@
+/* ===========================
+    IMPORTACIÓN DE FUENTES
+    =========================== */
+
+@import url("https://fonts.googleapis.com/css?family=Train+One:regular");
+/* Esta regla importa una fuente externa desde Google Fonts.
+    En este caso, la fuente se llama "Train One".
+    Gracias a esto, no es necesario tener la fuente instalada localmente. */
+
+
+/* ===========================
+    FUENTES BÁSICAS (del sistema)
+    =========================== */
+
+/*
+h1 {
+    font-family: sans-serif, arial, times;
+}
+*/
+/* 
+    Esta regla usa las fuentes que ya vienen instaladas en el sistema operativo.
+    La propiedad font-family acepta varias fuentes separadas por comas.
+    El navegador probará en orden:
+    - Primero: "sans-serif" (tipo genérico sin remates)
+    - Si no existe, probará con "arial"
+    - Si tampoco, con "times"
+    De esta forma siempre hay una fuente de respaldo.
+*/
+
+
+/* ===========================
+    FUENTES DESCARGADAS LOCALMENTE
+    =========================== */
+
+/*
+@font-face {
+    font-family: 'Zombie';
+    src: url("../tip/zombie.otf");
+}
+p {
+    font-family: 'Zombie';
+}
+*/
+/* 
+    @font-face permite usar una fuente que tú mismo tengas guardada en tu proyecto.
+    - 'font-family': nombre que tú defines (puede ser cualquiera).
+    - 'src': ruta del archivo de la fuente (formato .ttf, .woff, .otf…).
+    
+    En este caso la fuente está dentro de una carpeta llamada "fonts/Train_One/".
+    Luego puedes aplicarla usando el nombre que definiste ('Train One').
+*/
+
+
+/* ===========================
+    FUENTES EXTERNAS (Google Fonts)
+    =========================== */
+p {
+    font-family: 'Train One';
+}
+/* 
+    Aquí se aplica la fuente importada desde Google Fonts a todos los párrafos <p>.
+    Como la fuente fue traída con @import desde internet,
+    el navegador la descarga automáticamente y la usa.
+*/

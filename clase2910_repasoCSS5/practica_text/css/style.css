@@ -1,0 +1,81 @@
+/* =============================
+    IMPORTAR FUENTE EXTERNA
+    ============================= */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic");
+/* 
+    Se importa la fuente "Open Sans" desde Google Fonts, en todos sus grosores posibles (de 300 a 800).
+    Así puedes usarla con distintos valores de font-weight sin descargar más archivos.
+*/
+
+
+/* =============================
+    ESTILOS GENERALES DEL CUERPO
+    ============================= */
+body {
+    background-color: #000;
+    /* Fija el color de fondo de toda la página a negro (#000). */
+
+    margin: 0;
+    /* Elimina el margen por defecto del navegador para aprovechar toda la pantalla. */
+}
+
+
+/* =============================
+    ESTILOS DEL TEXTO PRINCIPAL
+    ============================= */
+h1 {
+    font-family: 'Open Sans';
+    /* Usa la fuente importada desde Google Fonts. */
+
+    text-align: center;
+    /* Centra el texto horizontalmente. */
+
+    line-height: 100vh;
+    /* Hace que el texto se centre verticalmente en la pantalla,
+        ya que la altura de línea es igual a la altura visible del navegador (100vh). */
+
+    color: #222;
+    /* Color inicial del texto: gris muy oscuro. */
+
+    margin: 0;
+    /* Elimina los márgenes para evitar espacios no deseados. */
+
+    font-size: 7em;
+    /* Tamaño de fuente muy grande (7 veces el tamaño base del navegador). */
+
+    font-weight: 600;
+    /* Define el grosor del texto (600 es semi-negrita). */
+
+    letter-spacing: 5px;
+    /* Añade espacio extra entre las letras (5 píxeles). */
+
+    text-transform: uppercase;
+    /* Convierte todo el texto en mayúsculas. */
+}
+
+
+/* =============================
+    EFECTO HOVER (AL PASAR EL RATÓN)
+    ============================= */
+h1:hover {
+    color: #FFF;
+    /* Cambia el color del texto a blanco (#FFF) cuando el ratón pasa por encima. */
+
+    text-shadow:
+        0 0 10px #FFF,
+        0 0 20px #FFF,
+        0 0 40px #ff0000,
+        0 0 80px #FFF,
+        0 0 120PX #FFF;
+    /* 
+        Crea un efecto de brillo o neón mediante varias sombras superpuestas:
+
+        - 0 0 10px #FFF → Sombra blanca cercana.
+        - 0 0 20px #FFF → Más brillo alrededor.
+        - 0 0 40px #ff0000 → Brillo rojo más difuso (efecto neón).
+        - 0 0 80px #FFF → Halo blanco más extendido.
+        - 0 0 120px #FFF → Brillo más amplio y suave.
+
+        En conjunto, producen un efecto luminoso, como un cartel de neón que se enciende.
+    */
+}
