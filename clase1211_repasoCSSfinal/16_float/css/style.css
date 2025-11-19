@@ -1,9 +1,20 @@
-p {
-    margin: 0;
+div {
+    width: 50%;
+    border: 4px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
 }
 
-#despliegue {
-    column-count: 3;
-    column-gap: 50px;
-    column-rule: 2px dashed blue;
+img {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    object-fit: cover;
+    float: left;
+}
+
+p {
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

@@ -1,9 +1,21 @@
-p {
-    margin: 0;
-}
+div {
+    width: 200px;
+    height: 200px;
+    background: orange;
 
-#despliegue {
-    column-count: 3;
-    column-gap: 50px;
-    column-rule: 2px dashed blue;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+
+    /*
+    https://bennettfeely.com/clippy/
+    Pares de números (x, y)
+    0% 0% -> esquina superior izquierda
+    100% 0% -> esquina superior derecha
+    100% 75% -> un poco antes de la esquina inferior derecha
+    75% 75% -> hacia el centro, creando un hueco
+    75% 100% -> esquina inferior derecha del "saliente"
+    50% 75% -> punto en el medio inferior como una fecla
+    0% 75%  -> reguresar al borde izquierdo
+    
+    */
+
 }

@@ -1,9 +1,27 @@
-p {
-    margin: 0;
+body {
+    perspective: 700px;
+    perspective-origin: center;
 }
 
-#despliegue {
-    column-count: 3;
-    column-gap: 50px;
-    column-rule: 2px dashed blue;
+.box {
+    margin: 150px auto;
+    width: 300px;
+    height: 300px;
+    background: lightseagreen;
+    transition: all 5s;
+    transform-style: preserve-3d;
+
+}
+
+
+.content {
+    width: 300px;
+    height: 300px;
+    background: yellow;
+    margin: auto;
+    transform: rotateY(90deg);
+}
+
+.box:hover {
+    transform: rotateY(360deg);
 }

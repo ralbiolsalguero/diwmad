@@ -1,9 +1,16 @@
-p {
-    margin: 0;
+.shape {
+    background: #0aec42;
+    width: 150px;
+    height: 150px;
+    margin: 100px auto;
+    transition: all 2s;
 }
 
-#despliegue {
-    column-count: 3;
-    column-gap: 50px;
-    column-rule: 2px dashed blue;
+.shape:hover {
+    transform: rotate(360deg);
+}
+
+.s2 {
+    background: orange;
+    transform-origin: left;
 }

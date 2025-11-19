@@ -1,9 +1,14 @@
-p {
-    margin: 0;
+section {
+    width: 800px;
+    height: 500px;
+    margin: 50px auto;
+    background: #979797;
 }
 
-#despliegue {
-    column-count: 3;
-    column-gap: 50px;
-    column-rule: 2px dashed blue;
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: violet;
+    position: sticky;
+    top: 20px;
 }

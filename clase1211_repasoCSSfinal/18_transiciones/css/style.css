@@ -1,9 +1,29 @@
-p {
-    margin: 0;
+div {
+    width: 200px;
+    height: 200px;
+    margin: 70px;
+    display: inline-block;
 }
 
-#despliegue {
-    column-count: 3;
-    column-gap: 50px;
-    column-rule: 2px dashed blue;
+.elemento1 {
+    background: orange;
+}
+
+.elemento1:hover{
+    background: #ff3300;
+}
+
+.elemento-transicion {
+    background-color: #00cedd;
+    /*
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear
+    transition-delay: 1s
+    */
+    transition: all 1s linear 0.2s;
+}
+
+.elemento-transicion:hover{
+    background: #001380;
 }

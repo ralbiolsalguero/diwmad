@@ -1,9 +1,46 @@
-p {
-    margin: 0;
+/*Propiedades disponibles para animaciones::after
+animation-name -> Tiene que coincidir con el @keyframes
+animation-duration -> duración total de la animación
+animation-timing-function -> Tipo de movimiento
+animation-delay -> Retraso antes de comenzar
+animation-literation-count -> Veces que se repite
+animation-direction -> Dirección
+animation-fill-mode -> Que pasa antes y despues de la nimación
+animation-play-state -> Estado (running o paused)
+
+
+*/
+
+
+div {
+    width: 200px;
+    height: 200px;
+    background: gray;
+    margin: 50px 0;
+
+    animation-name: changeColor;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
 }
 
-#despliegue {
-    column-count: 3;
-    column-gap: 50px;
-    column-rule: 2px dashed blue;
+@keyframes changeColor{
+    0% {
+        transform: translateX(0);
+        background: orange;
+    }
+
+    50% {
+        transform: translateX(700px);
+        background: orange;
+    }
+
+    100% {
+        transform: translateX(1000px);
+        background: #000;
+    }
 }

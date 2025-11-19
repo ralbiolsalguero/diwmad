@@ -1,9 +1,35 @@
-p {
-    margin: 0;
+div {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    display: inline-block;
 }
 
-#despliegue {
-    column-count: 3;
-    column-gap: 50px;
-    column-rule: 2px dashed blue;
+#trasladar {
+    background: orange;
+    transform: translateX(500px);
+    transform: translateY(-100px);
+    transform: translate(0,200px);
+}
+
+#escalar {
+    background: #8c00dd;
+    transition: all 0.5s;
+}
+
+#escalar:hover{
+    transform: scale(1.5);
+}
+
+#rotar {
+    background: #1aef9d;
+    transition: all 0.5s;
+}
+#rotar:hover {
+    transform: rotate(150deg);
+}
+
+#deformar {
+    background: #8bd130;
+    transform: skew(50deg);
 }

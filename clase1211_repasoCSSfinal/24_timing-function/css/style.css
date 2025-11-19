@@ -1,9 +1,73 @@
-p {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#despliegue {
-    column-count: 3;
-    column-gap: 50px;
-    column-rule: 2px dashed blue;
+.container {
+    width: 800px;
+    margin: auto;
+}
+
+section {
+    width: 100%;
+    height: auto;
+    border: 3px solid crimson;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+}
+
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+section div {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0 0;
+    background: crimson;
+    border-radius: 10px;
+    animation: animate 5s 1 forwards normal;
+}
+
+.linear {
+    animation-timing-function: linear;
+}
+
+.ease {
+    animation-timing-function: ease;
+}
+
+.easein {
+    animation-timing-function: ease-in;
+}
+
+.easeout {
+    animation-timing-function: ease-out;
+}
+
+.steps {
+    animation-timing-function: steps(4, jump-none);
+}
+
+
+.cubic {
+    animation-timing-function: cubic-bezier(0,1,1,.05);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(650px);
+    }
 }
