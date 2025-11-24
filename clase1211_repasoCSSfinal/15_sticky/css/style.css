@@ -1,14 +1,59 @@
+/* ============================================================
+   SELECTOR: section
+   ------------------------------------------------------------
+   Esta regla aplica estilos a cualquier etiqueta <section>.
+   En este caso, probablemente actúa como un contenedor principal.
+============================================================ */
 section {
-    width: 800px;
-    height: 500px;
-    margin: 50px auto;
-    background: #979797;
+    width: 800px;          /* Asigna un ancho fijo de 800px al contenedor.
+                              IMPORTANTE: al ser un ancho fijo, la section
+                              no se adaptará al tamaño de pantalla si ésta 
+                              es más pequeña. */
+                              
+    height: 500px;         /* Establece una altura fija de 500px.
+                              Esto significa que aunque el contenido interno
+                              sea más grande, no crecerá automáticamente 
+                              (a menos que usemos height: auto). */
+
+    margin: 50px auto;     /* Crea un margen superior e inferior de 50px.
+                              El valor 'auto' a izquierda/derecha centra 
+                              horizontalmente la sección dentro de la página. */
+
+    background: #979797;   /* Color de fondo gris claro. Sirve para visualizar 
+                              claramente el área que ocupa la sección. */
 }
 
+
+
+/* ============================================================
+   SELECTOR: .box1
+   ------------------------------------------------------------
+   Aplica estilos a un elemento con clase "box1".
+   Es una caja dentro de la section con posición sticky.
+============================================================ */
 .box1 {
-    width: 100px;
-    height: 100px;
-    background: violet;
-    position: sticky;
-    top: 20px;
+    width: 100px;          /* Ancho fijo de 100px para la caja. */
+
+    height: 100px;         /* Alto fijo de 100px, creando un cuadrado. */
+
+    background: violet;    /* Color de fondo para visualizarla fácilmente. */
+
+    position: sticky;      /* 'sticky' combina relative + fixed.
+                              Significa que la caja se comporta como 
+                              position: relative hasta que el scroll 
+                              llega a un punto determinado.
+                              
+                              A partir de ahí, la caja se queda "pegada"
+                              en pantalla como si fuera fixed. 
+                              
+                              Es muy útil para menús laterales, 
+                              títulos de sección o elementos que deben 
+                              quedarse visibles durante el scroll. */
+
+    top: 20px;             /* Define el punto de activación del sticky.
+                              Cuando el usuario haga scroll y la caja
+                              llegue a 20px desde la parte superior
+                              de la ventana, quedará “pegada” ahí.
+                              
+                              Si este valor no se pone, el sticky no funciona. */
 }

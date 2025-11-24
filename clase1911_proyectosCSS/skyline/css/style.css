@@ -1,0 +1,148 @@
+/* ============================================================
+   RESET GENERAL Y FUENTE DEL SISTEMA
+============================================================ */
+* {
+    margin: 0;                 /* Elimina todos los márgenes por defecto */
+    padding: 0;                /* Elimina todos los paddings */
+    box-sizing: border-box;    /* Control TOTAL de tamaños */
+    
+    /* Fuente limpia, moderna y optimizada */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+                 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+/* ============================================================
+   FONDO GLOBAL DEL DOCUMENTO
+============================================================ */
+body {
+    background-color: #262626;  /* Gris oscuro uniforme */
+}
+
+
+
+/* ============================================================
+   SELECTOR: h1 (título principal)
+   ------------------------------------------------------------
+   Este h1 se convierte en un “panel animado” con dos capas:
+   - La capa del título (texto)
+   - DOS pseudoelementos ::before y ::after animados
+============================================================ */
+h1 {
+    position: absolute;           /* Sacamos el h1 del flujo normal */
+    top: 50%;                     /* Lo colocamos en el centro vertical */
+    left: 50%;                    /* Lo colocamos en el centro horizontal */
+    transform: translate(-50%, -50%);
+    /* Ajuste perfecto al centro de la pantalla */
+    
+    width: 70%;                   /* Ancho grande y proporcional */
+    padding: 20px;                /* Espaciado interior */
+
+    text-transform: uppercase;    /* Todo el texto en mayúsculas */
+    font-size: 8em;               /* TÍTULO GIGANTE */
+    text-align: center;           /* Centrado */
+    letter-spacing: 0.1em;        /* Espacio entre letras → más elegancia */
+
+    background: #72ceff;          /* Azul suave para destacar el texto */
+    color: #FFF;                  /* Texto blanco */
+    
+    text-shadow: 0 5px 2px rgba(0,0,0,0.2);
+    /* Sombra suave del texto, da volumen y contraste */
+
+    overflow: hidden;
+    /* NECESARIO: evita que los pseudoelementos salgan del h1
+       durante la animación del hover */
+}
+
+
+
+/* ============================================================
+   PSEUDOELEMENTOS ::before Y ::after
+   ------------------------------------------------------------
+   Son DOS capas animadas con imágenes distintas que “suben”
+   y se mueven continuamente.
+============================================================ */
+h1::before,
+h1::after {
+    content: '';                 /* Crea el pseudoelemento */
+    position: absolute;
+    top: 100%;                   /* Colocamos ambas capas FUERA del h1 (debajo) */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: -1;
+    /* MUY IMPORTANTE:
+       -1 coloca las imágenes DETRÁS del h1
+       pero como h1 tiene background, se ven a través del pseudo
+       cuando este sube en el hover */
+
+    animation: animate 50s linear infinite;
+    /* ANIMACIÓN:
+       - 50 segundos → movimiento muy lento (efecto skyline)
+       - linear → velocidad constante
+       - infinite → nunca para */
+
+    transition: all .5s;
+    /* Hace que al pasar el ratón el movimiento vertical sea suave */
+
+    background-size: cover !important;
+    /* La imagen SIEMPRE debe cubrir todo el h1 */
+}
+
+
+
+/* ============================================================
+   PSEUDOELEMENTO ::before
+   ------------------------------------------------------------
+   Primera imagen (skyline2)
+============================================================ */
+h1::before {
+    background: url("../../img/skyline2.png");
+}
+
+
+
+/* ============================================================
+   PSEUDOELEMENTO ::after
+   ------------------------------------------------------------
+   Segunda imagen (skyline), capa más cercana
+============================================================ */
+h1::after {
+    background: url("../../img/skyline.png");
+}
+
+
+
+/* ============================================================
+   HOVER SOBRE EL H1
+   ------------------------------------------------------------
+   Al pasar el ratón, ambas capas (before y after) SUBEN
+   para mostrarse dentro del título.
+============================================================ */
+h1:hover::before,
+h1:hover::after {
+    top: 0;
+    /* Antes estaban a top: 100% (fuera abajo del h1)
+       Ahora suben por completo y se muestran dentro del título */
+}
+
+
+
+/* ============================================================
+   ANIMACIÓN: MOVER EL BACKGROUND HORIZONTALMENTE
+============================================================ */
+@keyframes animate {
+    0% {
+        background-position: 0%;
+        /* Punto inicial */
+    }
+
+    100% {
+        background-position: 100%;
+        /* La imagen se desplaza totalmente hacia la derecha,
+           creando un movimiento continuo tipo “ciudad que pasa” */
+    }
+}

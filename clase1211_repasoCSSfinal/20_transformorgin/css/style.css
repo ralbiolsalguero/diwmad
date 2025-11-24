@@ -1,16 +1,63 @@
+/* ============================================================
+   SELECTOR: .shape
+   ------------------------------------------------------------
+   Esta clase define una figura (un cuadrado) que rotará 
+   cuando el usuario pase el ratón por encima.
+============================================================ */
 .shape {
-    background: #0aec42;
-    width: 150px;
-    height: 150px;
-    margin: 100px auto;
-    transition: all 2s;
+    background: #0aec42;   /* Color de fondo verde brillante para destacar. */
+    width: 150px;          /* Ancho fijo de 150px. */
+    height: 150px;         /* Alto fijo de 150px → forma un cuadrado. */
+
+    margin: 100px auto;    /* 100px arriba/abajo.
+                              AUTO izquierda/derecha → centra el cuadrado
+                              en el contenedor. */
+
+    transition: all 2s;    /* Cualquier cambio en la propiedad transform
+                              se animará suavemente durante 2 segundos.
+                              Esto crea una rotación fluida. */
 }
 
+
+
+/* ============================================================
+   SELECTOR: .shape:hover
+   ------------------------------------------------------------
+   Se ejecuta cuando el usuario pasa el ratón por encima
+   del elemento con clase .shape.
+============================================================ */
 .shape:hover {
     transform: rotate(360deg);
+    /* Rota la figura 360 grados completos.
+       - Gracias a transition, la rotación es suave.
+       - El elemento regresa a su posición original
+         cuando quitamos el ratón (rotación reversible). */
 }
 
+
+
+/* ============================================================
+   SELECTOR: .s2
+   ------------------------------------------------------------
+   Esta clase modifica el comportamiento de rotación
+   cambiando el PUNTO DE GIRO del elemento.
+============================================================ */
 .s2 {
-    background: orange;
+    background: orange;      /* Cambia el color para distinguirla. */
+
     transform-origin: left;
+    /* ---------------------------------------------------------
+       transform-origin define el PUNTO desde el cual se aplica
+       cualquier transformación (rotar, escalar, skew, etc.)
+
+       Valores típicos:
+       - center   (por defecto)
+       - left, right, top, bottom
+       - porcentajes: 0% 0%, 100% 50%, etc.
+       - coordenadas: 20px 30px
+
+       transform-origin: left;
+       → El elemento girará desde su borde izquierdo,
+         como si estuviera "anclado" allí.
+       --------------------------------------------------------- */
 }

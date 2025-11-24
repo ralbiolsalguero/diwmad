@@ -1,27 +1,125 @@
+/* ============================================================
+   SELECTOR: body
+   ------------------------------------------------------------
+   Se aplican propiedades 3D AL CONTENEDOR PADRE de todo.
+   perspective y perspective-origin afectan a TODOS los hijos
+   que usen transformaciones 3D (rotateX, rotateY, rotateZ).
+============================================================ */
 body {
     perspective: 700px;
+    /* ---------------------------------------------------------
+       perspective define la profundidad 3D vista por el usuario.
+       
+       Cuanto MENOR es el valor → más fuerte y exagerado es el efecto 3D.
+       Cuanto MAYOR es el valor → efecto más suave y realista.
+
+       Ejemplos:
+       - perspective: 200px; → efecto muy agresivo
+       - perspective: 1000px; → efecto suave
+       Aquí usamos 700px → buen equilibrio visual.
+       --------------------------------------------------------- */
+
     perspective-origin: center;
+    /* ---------------------------------------------------------
+       perspective-origin define desde QUÉ PUNTO mira el usuario.
+       
+       Valores posibles:
+       - center (centro)
+       - top, bottom, left, right
+       - porcentajes (50% 50%)
+       - coordenadas (px px)
+
+       center = el usuario mira desde el centro exacto de la pantalla.
+       Esto hace que la rotación 3D sea totalmente simétrica.
+       --------------------------------------------------------- */
 }
 
+
+
+/* ============================================================
+   SELECTOR: .box
+   ------------------------------------------------------------
+   Este contenedor será el que gire en 3D.
+   Gracias a transition y transform-style, se crea un efecto
+   de rotación suave y visible con profundidad real.
+============================================================ */
 .box {
-    margin: 150px auto;
-    width: 300px;
-    height: 300px;
-    background: lightseagreen;
+    margin: 150px auto;     /* Centra la caja vertical y horizontalmente. */
+
+    width: 300px;           /* Ancho del cuadrado. */
+    height: 300px;          /* Alto del cuadrado. */
+
+    background: lightseagreen; /* Color inicial del cuadrado. */
+
     transition: all 5s;
+    /* ---------------------------------------------------------
+       Cualquier transformación aplicada a .box cambiará suavemente
+       durante 5 segundos → animación larga y fluida.
+       --------------------------------------------------------- */
+
     transform-style: preserve-3d;
+    /* ---------------------------------------------------------
+       MUY IMPORTANTE EN 3D:
+       - preserve-3d → los hijos de .box mantienen su profundidad
+                        y NO se "aplanan".
+       - flat → los hijos pierden el efecto 3D.
 
+       Si quieres que los elementos internos roten o se coloquen
+       en distintas posiciones 3D, ESTE VALOR es obligatorio.
+       --------------------------------------------------------- */
 }
 
 
+
+/* ============================================================
+   SELECTOR: .content
+   ------------------------------------------------------------
+   Contenido dentro de .box.
+   Se rota inicialmente 90 grados en el eje Y, 
+   por lo que de frente queda invisible (de canto).
+============================================================ */
 .content {
-    width: 300px;
+    width: 300px;            /* Mismo tamaño que el contenedor padre. */
     height: 300px;
-    background: yellow;
-    margin: auto;
+
+    background: yellow;      /* Color para distinguirlo. */
+
+    margin: auto;            /* Centrado automático. */
+
     transform: rotateY(90deg);
+    /* ---------------------------------------------------------
+       rotateY(90deg)
+       → gira el contenido 90 grados sobre el eje vertical.
+
+       Cuando un elemento está rotado 90 grados:
+       - NO lo ves de frente.
+       - Solo verías un borde muy fino.
+       - Al rotar .box, este contenido empezará a aparecer.
+
+       Es el efecto típico de "cara lateral" en una animación 3D.
+       --------------------------------------------------------- */
 }
 
+
+
+/* ============================================================
+   SELECTOR: .box:hover
+   ------------------------------------------------------------
+   Cuando el usuario pasa el ratón por encima de la caja,
+   la caja completa gira 360 grados en el eje Y.
+============================================================ */
 .box:hover {
     transform: rotateY(360deg);
+    /* ---------------------------------------------------------
+       rotationY → gira sobre el eje vertical.
+       360deg → una vuelta completa.
+
+       Gracias a:
+       - perspective en el body
+       - preserve-3d en .box
+       - transition: 5s
+
+       Obtienes un efecto de ROTACIÓN 3D REALISTA,
+       como si la caja fuese una pieza en el espacio.
+       --------------------------------------------------------- */
 }

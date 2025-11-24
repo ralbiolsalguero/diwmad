@@ -1,73 +1,158 @@
+/* ============================================================
+   RESET Y CONFIGURACIÓN GLOBAL
+============================================================ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;                 /* Elimina márgenes por defecto de todos los elementos */
+    padding: 0;                /* Elimina padding por defecto */
+    box-sizing: border-box;    /* Hace que width y height INCLUYAN padding y border.
+                                  Evita que los elementos crezcan de tamaño inesperadamente. */
 }
 
+
+
+/* ============================================================
+   CONTENEDOR GENERAL
+------------------------------------------------------------
+   Limita el ancho del contenido y lo centra en la pantalla.
+============================================================ */
 .container {
-    width: 800px;
-    margin: auto;
+    width: 800px;      /* Ancho máximo del área de contenido */
+    margin: auto;      /* Centra horizontalmente el contenedor */
 }
 
+
+
+/* ============================================================
+   SECCIONES DE ANIMACIÓN (cada una representa un ejemplo)
+============================================================ */
 section {
-    width: 100%;
-    height: auto;
-    border: 3px solid crimson;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    display: inline-block;
+    width: 100%;                 /* Ocupa todo el ancho del .container */
+    height: auto;                /* El alto se ajusta al contenido */
+    border: 3px solid crimson;   /* Borde decorativo */
+    border-radius: 10px;         /* Esquinas redondeadas */
+    padding: 20px;               /* Espacio interior */
+    margin: 20px;                /* Espacio alrededor entre secciones */
+    display: inline-block;       /* Hace que las secciones fluyan como bloques */
 }
 
+
+
+/* ============================================================
+   TITULAR
+============================================================ */
 h1 {
-    font-family: sans-serif;
-    text-align: center;
-    font-weight: normal;
-    letter-spacing: 2px;
-    font-size: 2em;
-    text-transform: uppercase;
+    font-family: sans-serif;     /* Fuente limpia y moderna */
+    text-align: center;          /* Centrado horizontal */
+    font-weight: normal;         /* Peso normal (no bold) */
+    letter-spacing: 2px;         /* Espaciado entre letras */
+    font-size: 2em;              /* Tamaño grande */
+    text-transform: uppercase;   /* Convierte el texto a MAYÚSCULAS */
 }
 
+
+
+/* ============================================================
+   ELEMENTOS ANIMADOS (cada cuadrado dentro de section)
+============================================================ */
 section div {
     width: 100px;
     height: 100px;
     margin: 20px 0 0;
     background: crimson;
     border-radius: 10px;
+
+    /* ---------------------------------------------------------
+       PROPIEDAD abreviada de animación:
+         animation: nombre duracion repeticiones forwards|backwards direction
+    --------------------------------------------------------- */
     animation: animate 5s 1 forwards normal;
+
+    /* SIGNIFICA:
+       - animate → nombre del @keyframes
+       - 5s → duración
+       - 1 → se reproduce una vez
+       - forwards → mantiene el estado final después de terminar
+       - normal → no va en reverse, va en la dirección natural del 0% al 100%
+    */
 }
+
+
+
+/* ============================================================
+   TIPOS DE CURVAS DE MOVIMIENTO (TIMING-FUNCTION)
+   Cada clase aplica una velocidad distinta a la animación.
+============================================================ */
 
 .linear {
     animation-timing-function: linear;
+    /* Movimiento CONSTANTE (misma velocidad todo el recorrido).
+       Esto hace que la animación sea predecible. */
 }
 
 .ease {
     animation-timing-function: ease;
+    /* Por defecto:
+       - Empieza lento
+       - Acelera en el centro
+       - Y frena antes de terminar
+       Movimiento natural, suave y profesional. */
 }
 
 .easein {
     animation-timing-function: ease-in;
+    /* Aceleración progresiva:
+       - Comienza muy lento
+       - Termina rápido
+       Ideal para movimientos que deben arrancar suaves. */
 }
 
 .easeout {
     animation-timing-function: ease-out;
+    /* Desaceleración:
+       - Comienza rápido
+       - Termina lento
+       Muy usado en desplazamientos que deben “aparcarse”. */
 }
 
 .steps {
     animation-timing-function: steps(4, jump-none);
-}
+    /* Divide la animación en "saltos".
+       steps(4) → la animación se mueve en 4 pasos bruscos.
 
+       jump-none:
+       - NO salta al siguiente frame
+       - Hace el efecto de animación de sprites o GIF pixelado
+
+       Muy útil para animaciones retro o de videojuegos. */
+}
 
 .cubic {
     animation-timing-function: cubic-bezier(0,1,1,.05);
+    /* Curva personalizada:
+       cubic-bezier(x1, y1, x2, y2)
+
+       Esta curva genera:
+       - Inicio SUPER lento
+       - Aceleración brutal
+       - Final muy rápido
+
+       Se usa en animaciones avanzadas, efectos dramáticos
+       o UI agresivas/llamativas. */
 }
 
+
+
+/* ============================================================
+   @KEYFRAMES — ANIMACIÓN GENERAL
+============================================================ */
 @keyframes animate {
     0% {
         transform: translateX(0);
+        /* Al empezar, el cuadrado está en su posición original. */
     }
 
     100% {
         transform: translateX(650px);
+        /* Al terminar la animación, se desplaza 650px hacia la derecha. */
     }
 }

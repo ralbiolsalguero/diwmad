@@ -1,46 +1,116 @@
-/*Propiedades disponibles para animaciones::after
-animation-name -> Tiene que coincidir con el @keyframes
-animation-duration -> duración total de la animación
-animation-timing-function -> Tipo de movimiento
-animation-delay -> Retraso antes de comenzar
-animation-literation-count -> Veces que se repite
-animation-direction -> Dirección
-animation-fill-mode -> Que pasa antes y despues de la nimación
-animation-play-state -> Estado (running o paused)
+/* ============================================================
+   PROPIEDADES DISPONIBLES PARA ANIMACIONES EN CSS
+   ------------------------------------------------------------
+   Estas propiedades controlan cómo se reproduce una animación.
+   Deben aplicarse al elemento que queremos animar.
+   
+   animation-name              → Nombre de la animación (debe coincidir con @keyframes)
+   animation-duration          → Duración total de la animación
+   animation-timing-function   → Tipo de curva/movimiento (linear, ease, ease-in…)
+   animation-delay             → Tiempo de espera antes de comenzar
+   animation-iteration-count   → Número de repeticiones (1, 2, 3 o infinite)
+   animation-direction         → Dirección de la animación (normal, reverse, alternate)
+   animation-fill-mode         → Qué pasa ANTES y DESPUÉS de animar (none, forwards, backwards, both)
+   animation-play-state        → Estado actual (running o paused)
+============================================================ */
 
 
-*/
 
-
+/* ============================================================
+   SELECTOR: div
+   ------------------------------------------------------------
+   Caja que se va a animar moviéndose horizontalmente
+   y cambiando de color.
+============================================================ */
 div {
-    width: 200px;
-    height: 200px;
-    background: gray;
-    margin: 50px 0;
+    width: 200px;              /* Ancho fijo del cuadrado. */
+    height: 200px;             /* Alto fijo → forma cuadrada. */
+    background: gray;          /* Color inicial ANTES de que la animación comience. */
+    margin: 50px 0;            /* Espaciado vertical. */
+
+
+    /* ------------ PROPIEDADES DE ANIMACIÓN ----------------- */
 
     animation-name: changeColor;
+    /* Nombre de la animación → debe coincidir EXACTAMENTE
+       con el nombre definido en @keyframes (changeColor). */
+
+
     animation-duration: 5s;
+    /* Duración total de la animación: 5 segundos. */
+
+
     animation-timing-function: linear;
+    /* Movimiento constante, sin aceleraciones ni frenadas.
+       Otros valores:
+       - ease (por defecto)
+       - ease-in
+       - ease-out
+       - ease-in-out
+       - cubic-bezier()
+    */
+
+
     animation-delay: 0.5s;
+    /* La animación espera 0.5 segundos ANTES de empezar a reproducirse. */
+
+
     animation-iteration-count: 1;
+    /* Número de repeticiones.
+       - 1  → se ejecuta una vez
+       - 3  → tres veces
+       - infinite → nunca se detiene
+    */
+
+
     animation-direction: alternate;
+    /* alternate → va y vuelve (ida y vuelta).
+       IMPORTANTE:
+       como iteration-count es "1", NO habrá vuelta completa.
+       alternate solo haría efecto si hubiese más repeticiones.
+    */
+
+
     animation-fill-mode: forwards;
+    /* Determina el estado FINAL del elemento una vez que la animación termine.
+
+       forwards → se queda en el estado del último frame del keyframe.
+       backwards → aplica el estado del primer frame durante el delay.
+       both → forwards + backwards.
+       none (por defecto) → vuelve al estado inicial.
+    */
+
+
     animation-play-state: running;
+    /* running → la animación se está reproduciendo.
+       paused → detiene la animación (se puede usar con :hover). */
 }
 
-@keyframes changeColor{
+
+
+/* ============================================================
+   @KEYFRAMES: changeColor
+   ------------------------------------------------------------
+   Aquí se define la animación.
+   Los porcentajes indican el progreso de la animación:
+   - 0%   → inicio
+   - 50%  → mitad
+   - 100% → final
+============================================================ */
+@keyframes changeColor {
+
     0% {
-        transform: translateX(0);
-        background: orange;
+        transform: translateX(0);    /* Comienza en su posición original. */
+        background: orange;          /* Primer color. */
     }
 
     50% {
-        transform: translateX(700px);
-        background: orange;
+        transform: translateX(700px); /* Avanza a la mitad del camino horizontal. */
+        background: orange;           /* Mantiene el color. */
     }
 
     100% {
-        transform: translateX(1000px);
-        background: #000;
+        transform: translateX(1000px); /* Llega aún más a la derecha. */
+        background: #000;              /* Finaliza en negro (por forwards, se mantiene). */
     }
 }

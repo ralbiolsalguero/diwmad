@@ -1,0 +1,136 @@
+/* ============================================================
+   RESET GENERAL + TIPOGRAFÍA DEL SISTEMA
+============================================================ */
+* {
+    margin: 0;                 /* Quita márgenes por defecto de todos los elementos */
+    padding: 0;                /* Quita también los paddings */
+    box-sizing: border-box;    /* El tamaño total de cada elemento incluirá padding y borde */
+    
+    /* Fuente moderna y optimizada del sistema */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+                 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+/* ============================================================
+   FONDO GENERAL DEL DOCUMENTO
+============================================================ */
+body {
+    background: #222;          /* Fondo oscuro para resaltar el menú */
+}
+
+
+
+/* ============================================================
+   UL → CONTENEDOR DEL MENÚ
+============================================================ */
+ul {
+    position: absolute;        /* Sacamos el UL del flujo normal */
+    top: 50%;                  /* Lo colocamos en el centro de la pantalla */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Movemos el UL hacia atrás el 50% de su propio tamaño
+       para centrarlo PERFECTAMENTE */
+}
+
+
+
+/* ============================================================
+   LI → CADA ELEMENTO DE LA LISTA
+============================================================ */
+ul li {
+    position: relative;        /* Necesario para posicionar ::before dentro del <a> */
+    list-style: none;          /* Quitamos el punto de la lista */
+    margin: 5%;                /* Separación entre elementos */
+}
+
+
+
+/* ============================================================
+   A → ENLACES DEL MENÚ
+   (este es el elemento principal del efecto visual)
+============================================================ */
+ul li a {
+    position: relative;        /* Para que ::before se posicione dentro */
+    height: 40px;              /* Alto del botón */
+    display: block;            /* Hace que todo el área sea clicable */
+    text-decoration: none;     /* Quitamos subrayado */
+    padding: 5px 10px;         /* Espaciado interno */
+    margin: 20px 0;            /* Separación vertical */
+    font-weight: 300;          /* Fuente fina, estilo moderno */
+    letter-spacing: 2px;       /* Espaciado entre letras */
+    overflow: hidden;          /* IMPORTANTE: oculta las animaciones internas
+                                  para que no se salgan del botón */
+}
+
+
+
+/* ============================================================
+   A::BEFORE → FONDO ANIMADO DEL BOTÓN
+============================================================ */
+ul li a::before {
+    content: '';               /* Crea el pseudoelemento */
+    position: absolute;        /* Posicionamiento dentro del <a> */
+    top: 0;
+    left: 0;
+    width: 100%;               /* Cubre todo el enlace */
+    height: 100%;
+    background-color: #ec333f; /* Color rojo del efecto */
+    
+    /* INICIO DEL EFECTO: fondo comprimido horizontalmente */
+    transform: scaleX(0);      /* Escalado horizontal: invisible */
+    transition: transform .5s; /* Animación suave */
+}
+
+
+
+/* ============================================================
+   EFECTO HOVER DEL FONDO ROJO
+============================================================ */
+ul li a:hover::before {
+    transform: scaleX(1);      /* Se expande ocupando todo el ancho */
+    transform-origin: left;    /* La expansión empieza desde la izquierda */
+    transition-delay: .5s;     /* El fondo aparece MEDIO segundo después */
+}
+
+
+
+/* ============================================================
+   SPAN → TEXTO DEL BOTÓN
+   HAY DOS SPAN PARA GENERAR EL EFECTO DESLIZANTE
+============================================================ */
+ul li a span {
+    position: relative;        /* Para poder mover cada span */
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    transition: all .5s;       /* Transición para el desplazamiento vertical */
+}
+
+
+
+/* ============================================================
+   PRIMER TEXTO: DESLIZA HACIA ARRIBA AL HOVER
+============================================================ */
+ul li a:hover span:nth-child(1){
+    transform: translateY(-100%);
+    /* El primer texto se desplaza hacia arriba
+       y desaparece dentro del overflow hidden */
+}
+
+
+
+/* ============================================================
+   SEGUNDO TEXTO: TAMBIÉN DESLIZA HACIA ARRIBA
+============================================================ */
+ul li a:hover span:nth-child(2) {
+    transform: translateY(-100%);
+    /* Este texto está justo debajo del primero,
+       por eso al subir ocupa su espacio y simula
+       un CAMBIO DE TEXTO animado muy elegante */
+}

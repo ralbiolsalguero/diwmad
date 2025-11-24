@@ -1,0 +1,139 @@
+/* ============================================================
+   RESET GLOBAL + TIPOGRAFÍA
+============================================================ */
+* {
+    margin: 0;                  /* Quita márgenes por defecto */
+    padding: 0;                 /* Quita paddings por defecto */
+    box-sizing: border-box;     /* Evita que padding afecte al tamaño real */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+                 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+/* ============================================================
+   FONDO DE LA PÁGINA
+============================================================ */
+body {
+    background-color: #929292;   /* Gris neutro de fondo */
+}
+
+
+
+/* ============================================================
+   CONTENEDOR PRINCIPAL DEL SLIDER
+============================================================ */
+.container {
+    position: relative;          /* Necesario porque dentro hay elementos absolutos */
+    margin: 50px auto;           /* Centra la caja (arriba/abajo 50px, auto horizontal) */
+    background: #FFF;            /* Fondo blanco del slider */
+    width: 1000px;               /* Ancho fijo del slider */
+    height: 550px;               /* Alto fijo */
+    padding: 10px;               /* Espacio interno */
+}
+
+
+
+/* ============================================================
+   LISTAS → quitamos los puntos de <ul> y <li>
+============================================================ */
+ul, li {
+    list-style: none;            /* Remove. Sin círculos ni numeración */
+}
+
+
+
+/* ============================================================
+   ZONA DEL SLIDER (donde van las imágenes)
+============================================================ */
+.slider {
+    position: relative;          /* Padre de los <div> posicionados absolutamente */
+    width: 100%;
+    height: 90%;                 /* Deja espacio para los botones */
+}
+
+
+
+/* ============================================================
+   CADA SLIDE (cada imagen envuelta en un div)
+============================================================ */
+.slider div {
+    position: absolute;          /* Todas las imágenes se apilan una encima de otra */
+    top: 0;
+    left: 0;
+    width: 100%;                 /* Ocupan todo el slider */
+    height: 100%;
+    opacity: 0;                  /* Importante: empiezan invisibles */
+    transition: opacity .5s;     /* Suaviza el cambio entre imágenes */
+}
+
+
+
+/* ============================================================
+   EL PRIMER SLIDE SE VE POR DEFECTO
+============================================================ */
+.slider div:first-child {
+    opacity: 1;
+}
+
+
+
+/* ============================================================
+   SLIDER ACTIVADO CON :target
+   ------------------------------------------------------------
+   Esto es la magia del slider sin JavaScript.
+   Cuando hacemos click en un enlace que apunta a un #id,
+   ese div se convierte en el objetivo (target) → se hace visible.
+============================================================ */
+.slider div:target {
+    opacity: 1;                  /* Se muestra el slide seleccionado */
+}
+
+
+
+/* ============================================================
+   ESTILO DE LAS IMÁGENES
+============================================================ */
+.slider div img {
+    width: 100%;                 /* La imagen siempre cubre todo el slider */
+    height: 100%;
+    object-fit: cover;           /* Recorta sin deformar */
+}
+
+
+
+/* ============================================================
+   MENÚ DE NAVEGACIÓN DEL SLIDER (botones redondos)
+============================================================ */
+.menu {
+    text-align: center;          /* Centra los botones */
+    margin: 10px;
+}
+
+
+
+/* ============================================================
+   CADA BOTÓN DEL SLIDER
+============================================================ */
+.menu li {
+    display: inline-block;       /* Los botones se colocan en fila */
+    text-align: center;
+}
+
+
+
+/* ============================================================
+   ESTILO DE LOS BOTONES (enlaces que cambian el slide)
+============================================================ */
+.menu li a {
+    display: inline-block;
+    width: 40px;                 /* Botón redondo */
+    height: 40px;
+    text-decoration: none;       /* Quitamos subrayado */
+    line-height: 40px;           /* Centra el texto verticalmente */
+    background: #262626;         /* Fondo oscuro */
+    color: #FFF;                 /* Texto blanco */
+    font-size: 20px;             /* Tamaño de número */
+    border-radius: 50%;          /* Hace el botón circular */
+}

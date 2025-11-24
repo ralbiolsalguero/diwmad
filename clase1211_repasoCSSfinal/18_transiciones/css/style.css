@@ -1,29 +1,90 @@
+/* ============================================================
+   SELECTOR: div
+   ------------------------------------------------------------
+   Estilos generales para TODOS los <div> del documento.
+   Aquí se les da tamaño fijo y se colocan uno al lado del otro.
+============================================================ */
 div {
-    width: 200px;
-    height: 200px;
-    margin: 70px;
-    display: inline-block;
+    width: 200px;          /* Ancho fijo de 200px para cada div.
+                              Sirve para crear cajas cuadradas. */
+
+    height: 200px;         /* Alto fijo de 200px → cada div será un cuadrado. */
+
+    margin: 70px;          /* Espacio exterior alrededor de cada caja.
+                              Se separan unos 70px entre sí. */
+
+    display: inline-block; /* Hace que las cajas se comporten como "bloques en línea":
+                              - Se colocan horizontalmente una al lado de la otra.
+                              - A diferencia de inline, respetan width y height.
+                              - A diferencia de block, no ocupan toda la línea. */
 }
 
+
+
+/* ============================================================
+   SELECTOR: .elemento1
+   ------------------------------------------------------------
+   Primera caja, con color naranja por defecto.
+============================================================ */
 .elemento1 {
-    background: orange;
+    background: orange;    /* Color inicial. */
 }
 
+
+
+/* ============================================================
+   SELECTOR: .elemento1:hover
+   ------------------------------------------------------------
+   Se activa cuando el usuario pasa el ratón por encima.
+============================================================ */
 .elemento1:hover{
-    background: #ff3300;
+    background: #ff3300;   /* Cambia el color al pasar el ratón.
+                              Como NO tiene transición definida,
+                              el cambio es inmediato (sin animación). */
 }
 
+
+
+/* ============================================================
+   SELECTOR: .elemento-transicion
+   ------------------------------------------------------------
+   Segunda caja, con transición aplicada.
+   Aquí entra el concepto de "animación CSS suave" mediante transition.
+============================================================ */
 .elemento-transicion {
-    background-color: #00cedd;
+    background-color: #00cedd; /* Color inicial (turquesa). */
+
     /*
-    transition-property: background;
-    transition-duration: 1s;
-    transition-timing-function: linear
-    transition-delay: 1s
+    ------------------------------------------------------------
+    TRANSITION EXPLICADA (FORMA LARGA)
+    ------------------------------------------------------------
+    transition-property: background;   → Qué propiedad quiero animar.
+    transition-duration: 1s;           → Cuánto dura la animación.
+    transition-timing-function: linear → Tipo de curva (constante).
+    transition-delay: 1s;              → Cuánto tarda en empezar.
+    ------------------------------------------------------------
     */
+
     transition: all 1s linear 0.2s;
+    /* Versión abreviada:
+         transition: propiedad  duración  easing     delay
+
+       all       → anima TODAS las propiedades que cambien
+       1s        → duración de 1 segundo
+       linear    → velocidad constante
+       0.2s      → espera 0.2 segundos antes de iniciar la animación
+    */
 }
 
-.elemento-transicion:hover{
-    background: #001380;
+
+
+/* ============================================================
+   SELECTOR: .elemento-transicion:hover
+   ------------------------------------------------------------
+   Cuando pasas el ratón sobre el div, cambia el fondo.
+   Como tiene transición definida, el cambio es suave.
+============================================================ */
+.elemento-transicion:hover {
+    background: #001380;  /* Cambia a azul oscuro.
+                             Este cambio se animará gracias a transition */
 }

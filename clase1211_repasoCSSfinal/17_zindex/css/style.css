@@ -1,31 +1,95 @@
+/* ============================================================
+   SELECTOR UNIVERSAL: *
+   ------------------------------------------------------------
+   Afecta a TODOS los elementos del documento.
+   Se usa principalmente para hacer un "reset" de estilos.
+============================================================ */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0;      /* Elimina todos los márgenes por defecto
+                       (ej: <body>, <h1>, <p>, etc.). */
+    padding: 0;     /* Elimina los paddings por defecto.
+                       Esto crea una base más consistente
+                       y evita comportamientos inesperados. */
 }
 
+
+
+/* ============================================================
+   SELECTOR: div
+   ------------------------------------------------------------
+   Aplica a TODOS los <div> del documento.
+   IMPORTANTE: Aquí se les asigna position: absolute,
+   lo que hace que todos los div se salgan del flujo normal
+   de la página y se posicionen de manera independiente.
+============================================================ */
 div {
-    position: absolute;
+    position: absolute;   /* El div se posiciona de forma absoluta
+                             respecto al primer contenedor padre
+                             que tenga position: relative.
+                             
+                             Si no hay ninguno → se posiciona
+                             respecto al viewport (pantalla). */
 }
 
+
+
+/* ============================================================
+   SELECTOR: h1
+   ------------------------------------------------------------
+   Estilos para el título principal.
+   Se usa posición absoluta para colocarlo encima del fondo.
+============================================================ */
 h1 {
-    position: absolute;
-    font-size: 40px;
-    color: #FFF;
-    font-family: sans-serif;
-    margin: 100px;
-    z-index: 2;
+    position: absolute;   /* Permite mover el h1 libremente por la pantalla,
+                             independientemente del resto de elementos. */
+    font-size: 40px;      /* Tamaño grande para destacar. */
+    color: #FFF;          /* Texto blanco → contrasta con el fondo. */
+    font-family: sans-serif; /* Fuente limpia y moderna. */
+    margin: 100px;        /* Desplaza el h1 desde la esquina superior izquierda.
+                             Esto actúa como si fuese un "top + left" indirecto
+                             porque el elemento está en absolute. */
+    z-index: 2;           /* z-index controla la CAPA visual.
+                             Cuanto mayor es el número, más arriba se muestra.
+                             Este h1 queda por encima de todo el fondo. */
 }
 
+
+
+/* ============================================================
+   SELECTOR: .fondo
+   ------------------------------------------------------------
+   Esta clase representa la imagen de fondo principal.
+   Cubre toda la pantalla.
+============================================================ */
 .fondo {
-    width: 100%;
-    height: 100vh;
+    width: 100%;                       /* Ocupa todo el ancho de la ventana. */
+    height: 100vh;                     /* 100vh = 100% del alto visible del viewport.
+                                          La sección ocupa toda la pantalla vertical. */
     background-image: url("../../img/background1.jpg");
-    z-index: 0;
+                                       /* Imagen de fondo principal. */
+    background-size: cover;            /* (Recomendado) Hace que la imagen
+                                          cubra toda la pantalla sin deformarse.
+                                          Si quieres que lo añada, dímelo. */
+    background-position: center;       /* Centra la imagen (muy recomendable). */
+    z-index: 0;                        /* Capa más baja → está detrás del resto. */
 }
 
+
+
+/* ============================================================
+   SELECTOR: .box
+   ------------------------------------------------------------
+   Esta capa actúa como una "capa de color" semitransparente
+   encima de la imagen de fondo.
+   Efecto típico de overlays en landing pages.
+============================================================ */
 .box {
-    width: 100%;
-    height: 100vh;
+    width: 100%;                       /* Cubre todo el ancho. */
+    height: 100vh;                     /* Cubre toda la pantalla en altura. */
     background: rgba(0, 102, 255, 0.5);
-    z-index: 1;
+                                       /* Fondo azul semitransparente.
+                                          rgba → alpha del 0 al 1.
+                                          0.5 = 50% transparente. */
+    z-index: 1;                        /* Se coloca por encima de la imagen
+                                          pero por debajo del título (h1). */
 }

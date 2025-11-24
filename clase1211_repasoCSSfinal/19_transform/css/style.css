@@ -1,35 +1,99 @@
+/* ============================================================
+   SELECTOR: div
+   ------------------------------------------------------------
+   Estilos generales para TODAS las cajas <div>.
+   Se crean cuadrados que se colocan en la misma línea.
+============================================================ */
 div {
-    width: 200px;
-    height: 200px;
-    margin: 50px;
-    display: inline-block;
+    width: 200px;            /* Ancho fijo de 200px para cada caja. */
+    height: 200px;           /* Alto fijo de 200px → cuadrados perfectos. */
+    margin: 50px;            /* Espacio exterior entre las cajas. */
+    display: inline-block;   /* Se colocan una al lado de otra en línea.
+                                - Respetan width y height.
+                                - No ocupan toda la línea como block. */
 }
 
+
+
+/* ============================================================
+   #trasladar — TRANSFORM: TRANSLATE
+   ------------------------------------------------------------
+   translate permite MOVER un elemento desde su posición original
+   sin afectar al resto del diseño (no desplaza otros elementos).
+============================================================ */
 #trasladar {
-    background: orange;
+    background: orange;        /* Color de fondo de la caja. */
+
     transform: translateX(500px);
+    /* Mueve la caja 500px hacia la DERECHA desde su posición original. */
+
     transform: translateY(-100px);
+    /* Mueve la caja 100px hacia ARRIBA desde su posición original. */
+
     transform: translate(0,200px);
+    /* IMPORTANTE:
+       Cuando se repite transform, SOLO se aplica la ÚLTIMA declaración.
+       Por eso, este translate final es el que realmente se aplica:
+       
+       → No se mueve en el eje X  (0px)
+       → Se mueve 200px hacia ABAJO en el eje Y
+
+       translate combina X e Y: translate(x, y)
+    */
 }
 
+
+
+/* ============================================================
+   #escalar — TRANSFORM: SCALE
+   ------------------------------------------------------------
+   scale agranda o reduce el tamaño del elemento SIN deformarlo.
+   El centro de escala es el centro del elemento (por defecto).
+============================================================ */
 #escalar {
-    background: #8c00dd;
-    transition: all 0.5s;
+    background: #8c00dd;       /* Color inicial. */
+    transition: all 0.5s;      /* Transición suave de 0.5s. */
 }
 
-#escalar:hover{
+#escalar:hover {
     transform: scale(1.5);
+    /* scale(1.5) → Aumenta el tamaño un 150%.
+       - scale(1) sería tamaño original.
+       - scale(2) sería el doble.
+       - scale(0.5) sería la mitad.
+       Gracias a transition, el cambio es animado. */
 }
 
+
+
+/* ============================================================
+   #rotar — TRANSFORM: ROTATE
+   ------------------------------------------------------------
+   rotate gira el elemento alrededor de su centro (por defecto).
+   El ángulo se expresa en grados (deg).
+============================================================ */
 #rotar {
-    background: #1aef9d;
-    transition: all 0.5s;
+    background: #1aef9d;      /* Fondo verde claro. */
+    transition: all 0.5s;     /* Animación suave en hover. */
 }
+
 #rotar:hover {
     transform: rotate(150deg);
+    /* Rota 150 grados en el sentido de las agujas del reloj.
+       Si fuese rotate(-150deg) giraría hacia la izquierda. */
 }
 
+
+
+/* ============================================================
+   #deformar — TRANSFORM: SKEW
+   ------------------------------------------------------------
+   skew inclina el elemento deformándolo en forma de paralelogramo.
+   Un skew fuerte produce un efecto de perspectiva deformada.
+============================================================ */
 #deformar {
-    background: #8bd130;
+    background: #8bd130;     /* Color de fondo. */
     transform: skew(50deg);
+    /* skew(50deg) → inclina el elemento 50 grados en el eje X.
+       El contenido también se deforma. */
 }
