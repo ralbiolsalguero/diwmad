@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Badeen+Display&family=Bitcount+Grid+Single:wght@100..900&family=Exile&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*
+   :root → Es la raíz del documento (equivalente al <html>).
+   Aquí se definen variables CSS reutilizables en todo el archivo.
+   --color-principal → verde brillante (#41eb41)
+   --color-sombra → el mismo verde pero con baja opacidad (20%), se usa como “glow”/sombra.
+*/
+:root {
+    --color-principal: #41eb41;
+    --color-sombra: rgba(65,235,65,0.2);
+}
+
+/*
+   Selector universal: aplica a TODOS los elementos.
+   - Quita márgenes y padding por defecto.
+   - box-sizing:border-box evita que padding y bordes cambien el tamaño real del elemento.
+   - Fuente por defecto de todo el documento → sans-serif.
+   - cursor:default evita cursores raros (por ejemplo, textos seleccionables).
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    cursor: default;
+}
+
+/*
+   .timeline → Contenedor principal de la línea del tiempo.
+   - position:relative → necesario para posicionar elementos hijos de forma absoluta.
+   - margin:50px auto → separa de arriba y centra horizontalmente.
+   - padding:40px 0 → espacio vertical dentro.
+   - width:100% → ocupa todo el ancho disponible.
+*/
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 100%;
+}
+
+/*
+   Línea vertical central de la timeline.
+   Se crea usando ::before para dibujarla sin necesidad de un <div>.
+   - content:'' → elemento generado.
+   - left:50% → centrada horizontalmente.
+   - width:2px → grosor de la línea.
+   - height:100% → recorre todo el contenedor.
+   - background:#c5c5c5 → color gris clarito.
+*/
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #c5c5c5;
+}
+
+/*
+   Cada li es un evento en la línea del tiempo.
+   - list-style:none → quita el numerito o punto del <li>.
+   - position:relative → permite colocar un círculo en ::before.
+   - width:50% → la timeline es izquierda-derecha alternada.
+   - padding:20px 40px → espacio interno en los “cuadros” laterales.
+*/
+.timeline ul li{
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+}
+
+/*
+   Los elementos impares → lado izquierdo.
+   - float:left → se colocan a la izquierda.
+   - text-align:right → texto pegado hacia la línea central.
+   - clear:both → evita solapamientos con floats anteriores.
+*/
+.timeline ul li:nth-child(odd){
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+/*
+   Los elementos pares → lado derecho.
+   - float:right → se colocan a la derecha.
+   - text-align:left → texto pegado hacia la línea central.
+   - clear:both → evita problemas de flotación.
+*/
+.timeline ul li:nth-child(even){
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+/*
+   Punto circular (nodo) que aparece a mitad de cada evento.
+   - content:'' → pseudoelemento creado.
+   - position:absolute → se posiciona manualmente.
+   - top:30px → altura donde aparece el puntito.
+   - width/height:10px → tamaño del círculo.
+   - background:var(--color-principal) → color verde definido antes.
+   - border-radius:50% → lo convierte en círculo.
+   - box-shadow: expandido externo con var(--color-sombra).
+     Esto genera un efecto glow o resplandor alrededor.
+   - transition:.5s → hace suave el efecto al pasar el ratón.
+*/
+.timeline ul li::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+    background: var(--color-principal);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--color-sombra);
+    transition: all .5s;
+}
+
+/*
+   Para los elementos impares (lado izquierdo):
+   - right:-6px → el punto se coloca justo antes de la línea central.
+*/
+.timeline ul li:nth-child(odd)::before{
+    right: -6px;
+}
+
+/*
+   Para los elementos pares (lado derecho):
+   - left:-4px → punto alineado a la izquierda hacia la línea central.
+*/
+.timeline ul li:nth-child(even)::before{
+    left: -4px;
+}
+
+/*
+   Hover sobre cada evento:
+   - transform:scale(1.7) → el punto crece un 70%.
+     Efecto visual de interacción.
+*/
+.timeline ul li:hover::before {
+    transform: scale(1.7);
+}

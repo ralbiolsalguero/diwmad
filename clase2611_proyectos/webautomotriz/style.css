@@ -1,0 +1,135 @@
+/* 
+   Selector universal (*) → afecta a absolutamente TODOS los elementos de la página.
+   - margin:0 → quita todos los márgenes por defecto.
+   - padding:0 → quita el relleno de todos los elementos.
+   - box-sizing:border-box → hace que el padding y el borde se incluyan dentro del ancho/alto.
+     (Esto evita que los elementos crezcan "más" de lo que mide su caja).
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+   section → será el bloque principal visible.
+   - height: calc(100vh - 50px) → ocupa el 100% de la pantalla menos 50px.
+     (Esto es porque abajo habrá una barra de 50px).
+   - background:url("wallpaper.jpg") → imagen de fondo.
+   - background-size:cover → la imagen siempre cubre totalmente la pantalla.
+   - background-position:center → asegura que la imagen esté centrada.
+*/
+section {
+    height: calc(100vh - 50px);
+    background: url("wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+   ul → barra inferior de 50px de alto.
+   - position:absolute → permite colocarla en la parte baja del section.
+   - bottom:0 → pegada al borde inferior.
+   - left:0 → pegada al borde izquierdo.
+   - width:100% → ocupa todo el ancho.
+   - height:50px → mide 50px de alto.
+*/
+ul {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+
+/*
+   ul li → cada cuadradito de color de la barra inferior.
+   - float:left → se colocan uno al lado del otro horizontalmente.
+   - list-style:none → quita los puntos típicos del <li>.
+   - width:20% → hay 5, así que 100% / 5 = 20% cada uno.
+   - height:100% → ocupan todo el alto de la barra.
+   - mix-blend-mode:hue → mezcla el color del li con la imagen de fondo,
+     generando un efecto de filtro de color.
+*/
+ul li {
+    float: left;
+    list-style: none;
+    width: 20%;
+    height: 100%;
+    mix-blend-mode: hue;
+}
+
+/*
+   Cuando el ratón entra en el UL completo:
+   - opacity:0 → todos los LI desaparecen (pero siguen ahí).
+*/
+ul:hover li {
+    opacity: 0;
+}
+
+/*
+   Cuando el ratón está encima de un LI concreto:
+   - opacity:1 → ese LI aparece aunque los demás estén a 0.
+*/
+ul li:hover {
+    opacity: 1;
+}
+
+/*
+   A partir de aquí, se asigna el color de cada LI según su posición (nth-child).
+   Son simplemente los colores base de cada filtro.
+*/
+ul li:nth-child(1){
+    background:  #FF5500;
+}
+
+ul li:nth-child(2){
+    background: #5500FF;
+}
+
+ul li:nth-child(3){
+    background: #00B3B3;
+}
+
+ul li:nth-child(4){
+    background: #44CC00;
+}
+
+ul li:nth-child(5){
+    background:  #E645A0;
+}
+
+/*
+   EFECTO DE EXPLOSIÓN DE COLOR:
+   Cuando pasas el ratón sobre un LI,
+   se genera una SÚPER sombra de 1500px que cubre toda la pantalla,
+   tiñéndola de ese color.
+
+   box-shadow: 0 0 0 1500px COLOR;
+   - El primer 0 → sombra horizontal
+   - El segundo 0 → sombra vertical
+   - El tercer 0 → blur (difuminado)
+   - 1500px → EXTENSIÓN gigante hacia afuera
+   - COLOR → el color correspondiente del LI
+   
+   Esto crea el efecto de que toda la pantalla se colorea según el LI.
+*/
+ul li:hover:nth-child(1){
+    box-shadow: 0 0 0 1500px #FF5500;
+}
+
+ul li:hover:nth-child(2){
+    box-shadow: 0 0 0 1500px #5500FF;
+}
+
+ul li:hover:nth-child(3){
+    box-shadow: 0 0 0 1500px #00B3B3;
+}
+
+ul li:hover:nth-child(4){
+    box-shadow: 0 0 0 1500px #44CC00;
+}
+
+ul li:hover:nth-child(5){
+    box-shadow: 0 0 0 1500px #E645A0;
+}
