@@ -1,0 +1,141 @@
+:root {
+    --text-color: #1D1D1F;
+    --text-color-claro: #86868B;
+    --color-enlaces: #06C;
+    --color-background: #FAFAFA;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--text-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: var(--color-background);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+}
+
+h1{
+    font-size: 48px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--text-color-claro);
+    margin-top: .5em;
+}
+
+img {
+    width: 100%;
+}
+
+.text-container {
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    height: 100%;
+}
+
+.grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.span5{ grid-column: span 5; }
+.span6{ grid-column: span 6; }
+.span7{ grid-column: span 7; }
+.span9{ grid-column: span 9; }
+.span12{ grid-column: span 12; }
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+nav .enlaces {
+    position: relative;
+    height: 100%;
+    padding: 0 22px;
+    margin: 0 auto;
+    max-width: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .enlaces img{
+    width: 16px;
+}
+
+nav .enlaces a {
+    color: #F5F5F7;
+    font-size: 14px;
+    padding: 0 10px;
+    opacity: .8;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+nav .enlaces a:hover {
+    opacity: 1;
+}
+
+header {
+    width: 100%;
+    height: calc(100vh - 44px);
+    margin: 44px 0 0 0;
+    background: #f2f2f2;
+}
+
+header img {
+    width: 85%;
+}
+
+header .text-container{
+    padding: 30px 0 0 0;
+    justify-content: flex-end !important;
+}
+
+header .img-container {
+    align-items: flex-end !important;
+}
