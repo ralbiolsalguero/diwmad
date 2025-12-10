@@ -1,3 +1,5 @@
+/*BLOQUE 1: Variables, Scrollbar, Generales, Tipografías, Imágenes y Secciones*/
+
 :root {
     --text-color: #1D1D1F;
     --text-color-claro: #86868B;
@@ -59,9 +61,28 @@ img {
     width: 100%;
 }
 
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
 .text-container {
     flex-direction: column;
 }
+
+.enlace-info {
+    font-size: 21px;
+    margin-top: 30px;
+    color: var(--color-enlaces);
+}
+
+.enlace-info:hover {
+    text-decoration: underline;
+}
+
+/*BLOQUE DE GRID*/
 
 .grid {
     display: grid;
@@ -81,6 +102,8 @@ img {
 .span7{ grid-column: span 7; }
 .span9{ grid-column: span 9; }
 .span12{ grid-column: span 12; }
+
+/*BLOQUE 2 - MENÚ + HEADER + SERVICIOS + PRODUCTOS*/
 
 nav {
     position: fixed;
@@ -120,6 +143,8 @@ nav .enlaces a:hover {
     opacity: 1;
 }
 
+/*BLOQUE HEADER*/
+
 header {
     width: 100%;
     height: calc(100vh - 44px);
@@ -138,4 +163,170 @@ header .text-container{
 
 header .img-container {
     align-items: flex-end !important;
+}
+
+/*SECCIÓN SERVICIOS*/
+
+.service{
+    background: url("../img/image2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.service::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.service .grid {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.service .contenedor{
+    flex-direction: column;
+    z-index: 1;
+}
+
+.service img {
+    width: 250px;
+    height: 250px;
+    margin: 25px 0;
+}
+.service .text-container h2{
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+/*SECCION PRODUCTOS - IPAD*/
+
+.ipad {
+    background: #FFF;
+}
+
+.ipad img {
+    height: 85%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.ipad .text-container {
+    grid-column: 2 / 4;
+    align-items: flex-start;
+}
+
+/*SECCIÓN PRODUCTOS WATCH*/
+
+.watch {
+    padding: 30px 50px 0 50px;
+}
+
+.watch .text-container img {
+    width: 100px;
+}
+
+/*Sección airpods*/
+
+.airpods {
+    height: auto;
+}
+
+/*BLOQUE 3: Music TV + iMac + Footer*/
+
+.musictv {
+    padding: 30px;
+}
+
+.musictv .text-container {
+    background: #000;
+}
+
+.musictv .text{
+    height: 50%;
+    width: 50%;
+    padding: 60px 0 0 0;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+.musictv .imagen {
+    height: 100%;
+    align-items: flex-end;
+}
+
+.musictv .text-container .icon{
+    width: 100px;
+    height: 40px;
+}
+
+.musictv .text-container h3 {
+    color: #FFF;
+}
+
+.musictv .text-container .enlace-info{
+    margin: 10px 0 30px 0;
+}
+
+.musictv .ct2 {
+    background: #FFF;
+}
+
+.musictv .ct2 .icon {
+    width: 150px;
+}
+
+.musictv .ct2 h3{
+    color: var(--text-color);
+}
+
+/*SECCIÓN IMAC*/
+
+.imac {
+    background: #FFF;
+    padding: 50px 0;
+}
+
+.imac img {
+    width: 50%;
+}
+
+.imac h1 {
+    font-size: 56px;
+}
+
+.imac h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.imac h3{
+    letter-spacing: 0.5px;
+    font-size: 18px;
+}
+
+footer {
+    width: 100%;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 16px;
+    opacity: .2;
+    transition: all .5s;
+}
+
+footer:hover img {
+    opacity: 1;
 }
