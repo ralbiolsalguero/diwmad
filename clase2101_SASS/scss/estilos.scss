@@ -1,0 +1,32 @@
+$color-primario: #e60023;
+$padding-base: 16px;
+
+body{
+    background-color: $color-primario;
+    padding: $padding-base;
+}
+
+nav {
+    background-color: black;
+    ul{
+        list-style: none;
+        li{
+            display: inline-block;
+            a {
+                color:white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.btn-base {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boton-rojo{
+    @extend .btn-base;
+    background: red;
+}

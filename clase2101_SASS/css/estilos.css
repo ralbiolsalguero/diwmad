@@ -1,0 +1,30 @@
+body {
+  background-color: #e60023;
+  padding: 16px;
+}
+
+nav {
+  background-color: black;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-base, .boton-rojo {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.boton-rojo {
+  background: red;
+}
+
+/*# sourceMappingURL=estilos.css.map */
