@@ -206,3 +206,142 @@ nav .iconos img{
     justify-content: space-between;
     align-items: flex-start;
 }
+
+.container-img .top-row a:not(.btn){
+    color: #FFF;
+    font-weight: 700;
+    width: 40%;
+    height: 100%;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    overflow: hidden;
+
+}
+
+.container-img .top-row span{
+    color: #FFF;
+    align-self: center;
+    padding-right: 5px;
+    font-size: 14px;
+}
+
+.container-img .top-row .btn{
+    background: var(--rojo100);
+    height: 45px;
+    min-width: 93px;
+}
+
+
+.container-img .top-row .btn:hover{
+    background: var(--rojoHover);
+}
+
+
+.container-img .bottom-row{
+    bottom: 0;
+    left: 0;
+    height: 64px;
+    justify-content: space-between;
+}
+
+.container-img .bottom-row a{
+    background: var(--gris100);
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #111;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.container-img .bottom-row a:nth-child(1){
+    width: 62%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container-img .bottom-row a:nth-child(1) span{
+    padding: 0 8px;
+    transform: rotate(45deg);
+    font-size: 12px;
+}
+
+.container-img .bottom-row a:nth-child(2),
+.container-img .bottom-row a:nth-child(3){
+    width: 32px;
+    justify-content: center;
+}
+
+.info-img{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+
+}
+
+.info-img .info img{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.info-img .info a {
+    font-size: 14px;
+    color:var(--gris400);
+    padding: 0 5px;
+}
+
+.info-img .info a:hover{
+    text-decoration: underline;
+}
+
+.reactions {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.reactions img{
+    width: 16px;
+    height: 16px;
+    margin-right: 1px;
+}
+
+.reactions span{
+    font-size: 14px;
+    margin-left: 5px;
+    color: var(--gris400);
+}
+
+.btn-inferiores {
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-inferiores a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    color: var(--gris400);
+    font-size: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 5px 0;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-inferiores a:hover{
+    background: var(--gris100);
+
+}
