@@ -1,0 +1,16 @@
+.articulo {
+  padding: 20px;
+  color: white;
+  background: #222;
+  border-radius: 10px;
+  text-align: center;
+}
+.articulo h1 {
+  font-size: 32px;
+}
+.articulo h2 {
+  font-size: 20px;
+  color: #ccc;
+}
+
+/*# sourceMappingURL=estilos.css.map */

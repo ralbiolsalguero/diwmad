@@ -1,0 +1,7 @@
+$colores: red, green, blue;
+
+h1{
+    color: nth($colores, 1); //green
+    font-size: 32px;
+}
+

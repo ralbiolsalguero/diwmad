@@ -1,0 +1,18 @@
+@mixin caja {
+    padding: 20px;
+    color: white;
+    background: #222;
+    border-radius: 10px;
+}
+
+.articulo{
+    @include caja;
+    text-align: center;
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 20px;
+        color: #ccc;
+    }
+}

@@ -1,0 +1,28 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+.container section {
+  float: left;
+  /*
+  width: 200px - 50px
+  200 - 50 = 150px
+  200/600 = 0.33333....
+  0.3333 * 100 = 33.33%
+  */
+  width: 33.3333333333%;
+  height: 400px;
+  /*Operaciones con color*/
+}
+.container aside {
+  float: left;
+  /*
+  Calculo de width:
+  400px / 600px = 0.6666
+  0.6666 * 100 = 66.67
+  */
+  width: 66.6666666667%;
+  height: 400px;
+}
+
+/*# sourceMappingURL=style.css.map */
