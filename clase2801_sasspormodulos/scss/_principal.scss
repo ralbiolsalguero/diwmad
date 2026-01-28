@@ -1,0 +1,71 @@
+.blog{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+
+.blog .card{
+    width: 40%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    margin: 20px;
+}
+
+.blog .card .card-header {
+    width: 100%;
+    height: 200px;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.blog .card:nth-child(1) .card-header {
+    background: url("../img/card1.jpg");
+}
+.blog .card:nth-child(2) .card-header {
+    background: url("../img/card2.jpg");
+}
+.blog .card:nth-child(3) .card-header {
+    background: url("../img/card3.jpg");
+}
+.blog .card:nth-child(4) .card-header {
+    background: url("../img/card4.jpg");
+}
+
+.blog .card .card-body{
+    padding: 20px;
+}
+
+.blog .card .card-body h2{
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.blog .card .card-body p{
+    text-align: justify;
+}
+
+.blog .card .card-footer{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.galeria {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.galeria img{
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+}

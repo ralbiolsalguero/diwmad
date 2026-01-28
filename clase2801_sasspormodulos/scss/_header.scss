@@ -1,0 +1,28 @@
+header {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("../img/image.jpg"), linear-gradient(45deg, #222, crimson);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header h1{
+    color: #FFF;
+    font-size: 8vmin;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header h2 {
+    color: #dedede;
+    font-size: 7vmin;
+    font-weight: 400px;
+}
